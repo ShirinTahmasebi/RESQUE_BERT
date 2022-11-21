@@ -1,0 +1,6 @@
+/data
+/checkpoints
+/src/data/test
+/venv_resque_bert
+/.ipynb_checkpoints/
+**/__pycache__
