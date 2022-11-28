@@ -62,7 +62,7 @@ def test_epoch(dataloader, model, device):
 
 
 # Load Model
-model = load_checkpoint_for_test('model_epoch_1.pt')
+model = load_checkpoint_for_test('model_epoch_7.pt')
 device = select_cuda_if_available()
 model.to(device)
 

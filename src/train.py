@@ -21,7 +21,10 @@ def train_epoch(dataloader, model, optimizer, scheduler, device):
         cls_mask = batch_data["cls_mask"].to(device)
         labels = batch_data["labels"].to(device)
 
-        optimizer.zero_grad()
+        assert len(labels[0][labels[0] != -1]) == sum(cls_mask[0])
+        assert sum(input_ids[0][cls_mask[0] == 1] != 101) == 0
+
+        model.zero_grad()
 
         loss, predictions = model(
             input_ids=input_ids, 
@@ -32,13 +35,20 @@ def train_epoch(dataloader, model, optimizer, scheduler, device):
         )
 
         loss.backward()
+
+        # Clip the norm of the gradients to 1.0.
+        # This is to help prevent the "exploding gradients" problem.
+        # https://mccormickml.com/2019/07/22/BERT-fine-tuning/
+        torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+
         optimizer.step()
         scheduler.step()
 
         # Gather data and report in console
         running_loss += loss.item()
-        if i % 1000 != 999:
+        if i % 1000 == 999:
             last_loss = running_loss / 1000 # Loss per batch
+            running_loss = 0
             print(f'Batch {i + 1} Loss: {last_loss}')
 
 
@@ -51,20 +61,22 @@ test_dataloader = data_loader.train_dataloader()
 
 
 # Train loop
-resque_model = ResqueModel(CONSTANTS.BERT_MODEL_UNCASED, number_of_classes=2)
+# resque_model = ResqueModel(CONSTANTS.BERT_MODEL_UNCASED, number_of_classes=2)
+
+
+# steps_per_epoch = data_loader.get_train_dataset_size() // data_loader.batch_size
+# total_training_steps = steps_per_epoch * CONSTANTS.NUMBER_OF_EPOCHS
+
+# optimizer = AdamW(resque_model.parameters(), lr=CONSTANTS.LEARNING_RATE)
+# scheduler = get_linear_schedule_with_warmup(
+#     optimizer, 
+#     num_training_steps=total_training_steps, 
+#     num_warmup_steps=CONSTANTS.NUMBER_OF_WARM_UP_STEPS
+# )
+  
+resque_model, optimizer, scheduler = load_checkpoint_for_train('model_epoch_1.pt', data_loader)
 device = select_cuda_if_available()
 resque_model.to(device)
-
-steps_per_epoch = data_loader.get_train_dataset_size() // data_loader.batch_size
-total_training_steps = steps_per_epoch * CONSTANTS.NUMBER_OF_EPOCHS
-
-optimizer = AdamW(resque_model.parameters(), lr=CONSTANTS.LEARNING_RATE)
-scheduler = get_linear_schedule_with_warmup(
-    optimizer, 
-    num_training_steps=total_training_steps, 
-    num_warmup_steps=CONSTANTS.NUMBER_OF_WARM_UP_STEPS
-)
-  
 
 for epoch in range(CONSTANTS.NUMBER_OF_EPOCHS):
     print(f'----> Epoch {epoch + 1}')

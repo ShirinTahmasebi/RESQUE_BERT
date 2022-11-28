@@ -2,5 +2,6 @@
 /checkpoints
 /src/data/test
 /venv_resque_bert
+/src/classification_test/
 /.ipynb_checkpoints/
 **/__pycache__

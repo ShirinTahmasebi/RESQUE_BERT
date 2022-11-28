@@ -11,6 +11,13 @@ class ResqueModel(nn.Module):
         self.criterion = nn.BCELoss()
     
     def forward(self, input_ids, atttention_mask, token_type_ids, cls_mask, labels):
+        for i in range(len(input_ids)):
+            assert len(input_ids[i]) == 512
+            assert len(atttention_mask[i]) == 512
+            assert len(token_type_ids[i]) == 512
+            assert len(cls_mask[i]) == 512
+            assert len(labels[i]) == 512
+        
         labels = labels[labels != -1].to(torch.float)
 
         bert_output = self.bert_model(

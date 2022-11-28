@@ -24,7 +24,7 @@ class Contants(object):
     
     @constant
     def NUMBER_OF_EPOCHS():
-        return 2
+        return 8
     
     # Optimizer parameters
     @constant
@@ -33,7 +33,15 @@ class Contants(object):
 
     @constant
     def NUMBER_OF_WARM_UP_STEPS():
-        return 1000
+        return 5
+
+    @constant
+    def DATA_DIR_TRAIN_RAW():
+        return 'data/sdss/processed_data/train/raw/'
+    
+    @constant
+    def DATA_DIR_TRAIN_WITH_CLS():
+        return 'data/sdss/processed_data/train/with_cls/'
 
     @constant
     def PROCESSED_DATA_TRAIN():

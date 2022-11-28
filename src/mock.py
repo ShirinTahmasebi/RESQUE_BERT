@@ -24,7 +24,7 @@ def create_mock_bert_processed_dataset():
     input_ids_q1 =  tokenized_q1['input_ids']
     attention_mask_q1 =  tokenized_q1['attention_mask']
     token_type_ids_q1 =  tokenized_q1['token_type_ids']
-    cls_mask_q1 = [1 * (x == "[CLS]") for x in (q1.split())]
+    cls_mask_q1 = [1 * (x == 101) for x in input_ids_q1[0].numpy()]
 
     tokenized_q2  = tokenizer.encode_plus(
         q2,
@@ -39,7 +39,7 @@ def create_mock_bert_processed_dataset():
     input_ids_q2 =  tokenized_q2['input_ids']
     attention_mask_q2 =  tokenized_q2['attention_mask']
     token_type_ids_q2 =  tokenized_q2['token_type_ids']
-    cls_mask_q2 = [1 * (x == "[CLS]") for x in (q2.split())]
+    cls_mask_q2 = [1 * (x == 101) for x in input_ids_q2[0].numpy()]
 
     tokenized_dic = [
         {
