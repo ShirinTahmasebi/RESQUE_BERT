@@ -50,10 +50,11 @@ def get_absolute_path(path_relative_to_project_root):
 ########################################################################
 ## Loading model
 
-def load_checkpoint_for_train(model_name, data_loader):
+def load_checkpoint_for_train(model_name, data_loader, device):
     from models.bert_based_model import ResqueModel
 
-    model = ResqueModel(CONSTANTS.BERT_MODEL_UNCASED, number_of_classes=2)
+    model = ResqueModel.from_pretrained(CONSTANTS.BERT_MODEL_NAME, num_labels=2)
+    model = model.to(device)
 
     steps_per_epoch = data_loader.get_train_dataset_size() // data_loader.batch_size
     total_training_steps = steps_per_epoch * CONSTANTS.NUMBER_OF_EPOCHS
@@ -75,7 +76,7 @@ def load_checkpoint_for_train(model_name, data_loader):
 
 def load_checkpoint_for_test(model_name):
     from models.bert_based_model import ResqueModel
-    model = ResqueModel(CONSTANTS.BERT_MODEL_UNCASED, number_of_classes=2)
+    model = ResqueModel.from_pretrained(CONSTANTS.BERT_MODEL_NAME, num_labels=2)
     save_checkpoint_path = create_dir_if_necessary('checkpoints/') + model_name
     checkpoint = torch.load(save_checkpoint_path)        
     model.load_state_dict(checkpoint['model_state_dict'])
