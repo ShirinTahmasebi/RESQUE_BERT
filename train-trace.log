@@ -1,0 +1,267 @@
+INFO:root:Start logging at: Sat Jan 21 18:08:45 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Start logging at: Sat Jan 21 18:09:00 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 12 layers!
+INFO:root:----> Epoch 1
+INFO:root:Batch 1000 Loss: 0.6689394266605377
+INFO:root:Batch 2000 Loss: 0.6422832131683827
+INFO:root:Batch 3000 Loss: 0.6330634528696537
+INFO:root:Batch 4000 Loss: 0.6327345820963383
+INFO:root:Batch 5000 Loss: 0.6245689871311187
+INFO:root:Batch 6000 Loss: 0.6190353536009788
+INFO:root:Batch 7000 Loss: 0.6207230547070504
+INFO:root:Batch 8000 Loss: 0.6157998557388783
+INFO:root:----> Epoch 2
+INFO:root:Batch 1000 Loss: 0.6117983222305775
+INFO:root:Batch 2000 Loss: 0.6038976594805717
+INFO:root:Batch 3000 Loss: 0.609337613940239
+INFO:root:Batch 4000 Loss: 0.6103435774445534
+INFO:root:Batch 5000 Loss: 0.6060106934607029
+INFO:root:Batch 6000 Loss: 0.6029026255607605
+INFO:root:Batch 7000 Loss: 0.6021706246137619
+INFO:root:Batch 8000 Loss: 0.6033034165501594
+INFO:root:Execution time for RESQUE_BERT_FREEZED_12 is 220.9296719590823 minutes
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 11 layers!
+INFO:root:----> Epoch 1
+INFO:root:Batch 1000 Loss: 0.6622544620335102
+INFO:root:Batch 2000 Loss: 0.6138227032721043
+INFO:root:Batch 3000 Loss: 0.5823008595705033
+INFO:root:Batch 4000 Loss: 0.5775071205496788
+INFO:root:Batch 5000 Loss: 0.5668645439445973
+INFO:root:Batch 6000 Loss: 0.5626487568318844
+INFO:root:Batch 7000 Loss: 0.5624692582190037
+INFO:root:Batch 8000 Loss: 0.5490865251719952
+INFO:root:----> Epoch 2
+INFO:root:Batch 1000 Loss: 0.5423821230828763
+INFO:root:Batch 2000 Loss: 0.5414244635552168
+INFO:root:Batch 3000 Loss: 0.5427389526963234
+INFO:root:Batch 4000 Loss: 0.5422681360393763
+INFO:root:Batch 5000 Loss: 0.5440958329290152
+INFO:root:Batch 6000 Loss: 0.5449454233944416
+INFO:root:Batch 7000 Loss: 0.5361333372443915
+INFO:root:Batch 8000 Loss: 0.5388671162575484
+INFO:root:Execution time for RESQUE_BERT_FREEZED_11 is 231.3089007417361 minutes
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 10 layers!
+INFO:root:----> Epoch 1
+INFO:root:Batch 1000 Loss: 0.6659782635569572
+INFO:root:Batch 2000 Loss: 0.6050142231583595
+INFO:root:Batch 3000 Loss: 0.5811456455588341
+INFO:root:Batch 4000 Loss: 0.566189078181982
+INFO:root:Batch 5000 Loss: 0.5555617617070675
+INFO:root:Batch 6000 Loss: 0.5522253053188324
+INFO:root:Batch 7000 Loss: 0.5491568255424499
+INFO:root:Batch 8000 Loss: 0.542122563958168
+INFO:root:----> Epoch 2
+INFO:root:Batch 1000 Loss: 0.5374419687837362
+INFO:root:Batch 2000 Loss: 0.5344415705353022
+INFO:root:Batch 3000 Loss: 0.5276364773064852
+INFO:root:Batch 4000 Loss: 0.5281172855347395
+INFO:root:Batch 5000 Loss: 0.5255000640004873
+INFO:root:Batch 6000 Loss: 0.5216471193730832
+INFO:root:Batch 7000 Loss: 0.5271876402497292
+INFO:root:Batch 8000 Loss: 0.5244752839803696
+INFO:root:Execution time for RESQUE_BERT_FREEZED_10 is 225.80158882538478 minutes
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 9 layers!
+INFO:root:----> Epoch 1
+INFO:root:Batch 1000 Loss: 0.669553010046482
+INFO:root:Batch 2000 Loss: 0.6042313600182533
+INFO:root:Batch 3000 Loss: 0.577005543768406
+INFO:root:Batch 4000 Loss: 0.5647444144189357
+INFO:root:Batch 5000 Loss: 0.5572421272099018
+INFO:root:Batch 6000 Loss: 0.545848058283329
+INFO:root:Batch 7000 Loss: 0.5447046170532703
+INFO:root:Batch 8000 Loss: 0.5391850058287382
+INFO:root:----> Epoch 2
+INFO:root:Batch 1000 Loss: 0.5370079185664653
+INFO:root:Batch 2000 Loss: 0.5226271652430295
+INFO:root:Batch 3000 Loss: 0.5245760701596737
+INFO:root:Batch 4000 Loss: 0.5200086368322372
+INFO:root:Batch 5000 Loss: 0.5225083509087562
+INFO:root:Batch 6000 Loss: 0.5137355590760708
+INFO:root:Batch 7000 Loss: 0.5189962860494852
+INFO:root:Batch 8000 Loss: 0.5118856630772353
+INFO:root:Execution time for RESQUE_BERT_FREEZED_9 is 232.56633401314417 minutes
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 8 layers!
+INFO:root:----> Epoch 1
+INFO:root:Batch 1000 Loss: 0.6610156380832195
+INFO:root:Batch 2000 Loss: 0.5927782945930958
+INFO:root:Batch 3000 Loss: 0.5714693215638399
+INFO:root:Batch 4000 Loss: 0.564478506013751
+INFO:root:Batch 5000 Loss: 0.5446109378486872
+INFO:root:Batch 6000 Loss: 0.5473136817812919
+INFO:root:Batch 7000 Loss: 0.5380348166078329
+INFO:root:Batch 8000 Loss: 0.5377020775973796
+INFO:root:----> Epoch 2
+INFO:root:Batch 1000 Loss: 0.5224246528744697
+INFO:root:Batch 2000 Loss: 0.5243953136205673
+INFO:root:Batch 3000 Loss: 0.5250416693687439
+INFO:root:Batch 4000 Loss: 0.5124102710783481
+INFO:root:Batch 5000 Loss: 0.5103555255830288
+INFO:root:Batch 6000 Loss: 0.5006932048052549
+INFO:root:Batch 7000 Loss: 0.5051966239660979
+INFO:root:Batch 8000 Loss: 0.5137556069940329
+INFO:root:Execution time for RESQUE_BERT_FREEZED_8 is 239.37343788544337 minutes
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 7 layers!
+INFO:root:----> Epoch 1
+INFO:root:Batch 1000 Loss: 0.6557895931303501
+INFO:root:Batch 2000 Loss: 0.5972034819424152
+INFO:root:Batch 3000 Loss: 0.5712342913746834
+INFO:root:Batch 4000 Loss: 0.5605852279514074
+INFO:root:Batch 5000 Loss: 0.5549372662007809
+INFO:root:Batch 6000 Loss: 0.5454848783910274
+INFO:root:Batch 7000 Loss: 0.5387207358032465
+INFO:root:Batch 8000 Loss: 0.5374165379106999
+INFO:root:----> Epoch 2
+INFO:root:Batch 1000 Loss: 0.5276030016839505
+INFO:root:Batch 2000 Loss: 0.5227523755282164
+INFO:root:Batch 3000 Loss: 0.516571702554822
+INFO:root:Batch 4000 Loss: 0.5053139471560717
+INFO:root:Batch 5000 Loss: 0.5105908201038838
+INFO:root:Batch 6000 Loss: 0.5086017597019672
+INFO:root:Batch 7000 Loss: 0.5064447797983885
+INFO:root:Batch 8000 Loss: 0.5070775575637817
+INFO:root:Execution time for RESQUE_BERT_FREEZED_7 is 246.1031833132108 minutes
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 6 layers!
+INFO:root:----> Epoch 1
+INFO:root:Batch 1000 Loss: 0.6614833818674087
+INFO:root:Batch 2000 Loss: 0.5968980677723884
+INFO:root:Batch 3000 Loss: 0.5731146898269653
+INFO:root:Batch 4000 Loss: 0.554737897247076
+INFO:root:Batch 5000 Loss: 0.5476579214185476
+INFO:root:Batch 6000 Loss: 0.540719247609377
+INFO:root:Batch 7000 Loss: 0.5349049519896507
+INFO:root:Batch 8000 Loss: 0.5357637090533972
+INFO:root:----> Epoch 2
+INFO:root:Batch 1000 Loss: 0.5198397438675165
+INFO:root:Batch 2000 Loss: 0.516734270721674
+INFO:root:Batch 3000 Loss: 0.5131670848429203
+INFO:root:Batch 4000 Loss: 0.5131655595675111
+INFO:root:Batch 5000 Loss: 0.5125718696564436
+INFO:root:Batch 6000 Loss: 0.5074096299186349
+INFO:root:Batch 7000 Loss: 0.5046895421370864
+INFO:root:Batch 8000 Loss: 0.49572941771149637
+INFO:root:Execution time for RESQUE_BERT_FREEZED_6 is 252.89733151197433 minutes
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 5 layers!
+INFO:root:----> Epoch 1
+INFO:root:Batch 1000 Loss: 0.6572778395414353
+INFO:root:Batch 2000 Loss: 0.5944257607758046
+INFO:root:Batch 3000 Loss: 0.5687209034562111
+INFO:root:Batch 4000 Loss: 0.5548315211832523
+INFO:root:Batch 5000 Loss: 0.5508638006448746
+INFO:root:Batch 6000 Loss: 0.5395902162641287
+INFO:root:Batch 7000 Loss: 0.5328648510724306
+INFO:root:Batch 8000 Loss: 0.5254503825604916
+INFO:root:----> Epoch 2
+INFO:root:Batch 1000 Loss: 0.5173333922475576
+INFO:root:Batch 2000 Loss: 0.5072219232916833
+INFO:root:Batch 3000 Loss: 0.5106241329014302
+INFO:root:Batch 4000 Loss: 0.5043070213645696
+INFO:root:Batch 5000 Loss: 0.4941102624386549
+INFO:root:Batch 6000 Loss: 0.4868921688050032
+INFO:root:Batch 7000 Loss: 0.48648185558617113
+INFO:root:Batch 8000 Loss: 0.48545491603016855
+INFO:root:Execution time for RESQUE_BERT_FREEZED_5 is 259.68294914563495 minutes
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 4 layers!
+INFO:root:----> Epoch 1
+INFO:root:Batch 1000 Loss: 0.6500998041927815
+INFO:root:Batch 2000 Loss: 0.5893286762833595
+INFO:root:Batch 3000 Loss: 0.572749949708581
+INFO:root:Batch 4000 Loss: 0.549247245773673
+INFO:root:Batch 5000 Loss: 0.538482605472207
+INFO:root:Batch 6000 Loss: 0.5334215679168701
+INFO:root:Batch 7000 Loss: 0.5302216351777315
+INFO:root:Batch 8000 Loss: 0.5255773192942143
+INFO:root:----> Epoch 2
+INFO:root:Batch 1000 Loss: 0.5082406221479178
+INFO:root:Batch 2000 Loss: 0.49613592003285883
+INFO:root:Batch 3000 Loss: 0.5002635086178779
+INFO:root:Batch 4000 Loss: 0.48235378580540417
+INFO:root:Batch 5000 Loss: 0.4772118924483657
+INFO:root:Batch 6000 Loss: 0.4759266459941864
+INFO:root:Batch 7000 Loss: 0.46829303001612427
+INFO:root:Batch 8000 Loss: 0.45894368352741005
+INFO:root:Execution time for RESQUE_BERT_FREEZED_4 is 266.45615855058037 minutes
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 3 layers!
+INFO:root:----> Epoch 1
+INFO:root:Batch 1000 Loss: 0.6556627137959004
+INFO:root:Batch 2000 Loss: 0.5849734357446432
+INFO:root:Batch 3000 Loss: 0.5664575046002864
+INFO:root:Batch 4000 Loss: 0.5571413767635822
+INFO:root:Batch 5000 Loss: 0.5453421798050404
+INFO:root:Batch 6000 Loss: 0.5394156918078661
+INFO:root:Batch 7000 Loss: 0.5331791435480118
+INFO:root:Batch 8000 Loss: 0.5281645022630691
+INFO:root:----> Epoch 2
+INFO:root:Batch 1000 Loss: 0.5134312343448401
+INFO:root:Batch 2000 Loss: 0.5123922035545111
+INFO:root:Batch 3000 Loss: 0.5102578664720059
+INFO:root:Batch 4000 Loss: 0.5092150154411793
+INFO:root:Batch 5000 Loss: 0.5015701304674148
+INFO:root:Batch 6000 Loss: 0.49456672863662243
+INFO:root:Batch 7000 Loss: 0.4936542237997055
+INFO:root:Batch 8000 Loss: 0.49284142468869685
+INFO:root:Execution time for RESQUE_BERT_FREEZED_3 is 295.8359518329302 minutes
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 2 layers!
+INFO:root:----> Epoch 1
+INFO:root:Batch 1000 Loss: 0.6454215462207794
+INFO:root:Batch 2000 Loss: 0.5965430160164833
+INFO:root:Batch 3000 Loss: 0.5774036811292171
+INFO:root:Batch 4000 Loss: 0.553247997045517
+INFO:root:Batch 5000 Loss: 0.5535925200134516
+INFO:root:Batch 6000 Loss: 0.5404394505918027
+INFO:root:Batch 7000 Loss: 0.5279969199001789
+INFO:root:Batch 8000 Loss: 0.5283417462110519
+INFO:root:----> Epoch 2
+INFO:root:Batch 1000 Loss: 0.5194181630015373
+INFO:root:Batch 2000 Loss: 0.5141327279806137
+INFO:root:Batch 3000 Loss: 0.5132845115363598
+INFO:root:Batch 4000 Loss: 0.504086492523551
+INFO:root:Batch 5000 Loss: 0.5057701860964299
+INFO:root:Batch 6000 Loss: 0.4966940021701157
+INFO:root:Batch 7000 Loss: 0.48849299769103527
+INFO:root:Batch 8000 Loss: 0.4818355923742056
+INFO:root:Execution time for RESQUE_BERT_FREEZED_2 is 290.2584433992704 minutes
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 1 layers!
+INFO:root:----> Epoch 1
+INFO:root:Batch 1000 Loss: 0.6559643105566502
+INFO:root:Batch 2000 Loss: 0.5858105905652046
+INFO:root:Batch 3000 Loss: 0.5636514237076045
+INFO:root:Batch 4000 Loss: 0.5495749891996383
+INFO:root:Batch 5000 Loss: 0.5468481823503971
+INFO:root:Batch 6000 Loss: 0.534130125939846
+INFO:root:Batch 7000 Loss: 0.5356776348799467
+INFO:root:Batch 8000 Loss: 0.5294140714854002
+INFO:root:----> Epoch 2
+INFO:root:Batch 1000 Loss: 0.5186163824498653
+INFO:root:Batch 2000 Loss: 0.5083751227110624
+INFO:root:Batch 3000 Loss: 0.5090925070494413
+INFO:root:Batch 4000 Loss: 0.500496001034975
+INFO:root:Batch 5000 Loss: 0.4952995238155127
+INFO:root:Batch 6000 Loss: 0.49105886347591876
+INFO:root:Batch 7000 Loss: 0.48509710128605366
+INFO:root:Batch 8000 Loss: 0.48733587868511674

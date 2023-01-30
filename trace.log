@@ -1,0 +1,424 @@
+INFO:root:Start logging at: Tue Jan 24 07:58:59 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Start logging at: Tue Jan 24 09:02:41 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_9_0.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([1., 0., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Labels: tensor([1., 1., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.725920557975769
+INFO:root:Table Accuracy: 0.7378973960876465
+INFO:root:Attribute Accuracy: 0.7212972044944763
+INFO:root:Function Accuracy: nan
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_7_1.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([0., 0., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Labels: tensor([1., 1., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.7434625625610352
+INFO:root:Table Accuracy: 0.7597929239273071
+INFO:root:Attribute Accuracy: 0.7371585369110107
+INFO:root:Function Accuracy: nan
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_7_0.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([0., 0., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Labels: tensor([1., 1., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.7347313761711121
+INFO:root:Table Accuracy: 0.7490239143371582
+INFO:root:Attribute Accuracy: 0.729214072227478
+INFO:root:Function Accuracy: nan
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_6_1.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([0., 0., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Labels: tensor([1., 1., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.7437373995780945
+INFO:root:Table Accuracy: 0.7529281973838806
+INFO:root:Attribute Accuracy: 0.7401894927024841
+INFO:root:Function Accuracy: nan
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_6_0.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([0., 0., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Labels: tensor([1., 1., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.7264463305473328
+INFO:root:Table Accuracy: 0.7093088030815125
+INFO:root:Attribute Accuracy: 0.7330620884895325
+INFO:root:Function Accuracy: nan
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_5_0.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([1., 0., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Labels: tensor([1., 1., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.7296488285064697
+INFO:root:Table Accuracy: 0.7245255708694458
+INFO:root:Attribute Accuracy: 0.7316266894340515
+INFO:root:Function Accuracy: nan
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_5_1.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([0., 0., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Labels: tensor([1., 1., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.7586584091186523
+INFO:root:Table Accuracy: 0.7774838209152222
+INFO:root:Attribute Accuracy: 0.7513912320137024
+INFO:root:Function Accuracy: nan
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_4_0.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([0., 0., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Labels: tensor([1., 1., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.744330883026123
+INFO:root:Table Accuracy: 0.7448478937149048
+INFO:root:Attribute Accuracy: 0.744131326675415
+INFO:root:Function Accuracy: nan
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_4_1.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([0., 0., 0.,  ..., 1., 1., 0.], device='cuda:0')
+INFO:root:Labels: tensor([1., 1., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.7777020335197449
+INFO:root:Table Accuracy: 0.7836477160453796
+INFO:root:Attribute Accuracy: 0.7754068970680237
+INFO:root:Function Accuracy: nan
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_3_0.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([0., 0., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Labels: tensor([1., 1., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.7290473580360413
+INFO:root:Table Accuracy: 0.7229666709899902
+INFO:root:Attribute Accuracy: 0.7313947677612305
+INFO:root:Function Accuracy: nan
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_3_1.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([0., 0., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Labels: tensor([1., 1., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.7526677250862122
+INFO:root:Table Accuracy: 0.7658853530883789
+INFO:root:Attribute Accuracy: 0.7475653290748596
+INFO:root:Function Accuracy: nan
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_2_0.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([0., 0., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Labels: tensor([1., 1., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.7370416522026062
+INFO:root:Table Accuracy: 0.7400426268577576
+INFO:root:Attribute Accuracy: 0.7358832359313965
+INFO:root:Function Accuracy: nan
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_2_1.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([0., 0., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Labels: tensor([1., 1., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.755989670753479
+INFO:root:Table Accuracy: 0.7696751952171326
+INFO:root:Attribute Accuracy: 0.750706672668457
+INFO:root:Function Accuracy: nan
+INFO:root:Start logging at: Tue Jan 24 11:32:48 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+
+INFO:root:Start logging at: Wed Jan 25 16:08:09 2023
+INFO:root:Start logging at: Wed Jan 25 16:14:13 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/vocab.txt HTTP/1.1" 200 0
+INFO:root:Start logging at: Wed Jan 25 16:18:20 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_9_0.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([1., 0., 0.,  ..., 0., 1., 0.], device='cuda:0')
+INFO:root:Labels: tensor([0., 1., 1.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.5181374549865723
+INFO:root:Table Accuracy: 0.5622748732566833
+INFO:root:Attribute Accuracy: 0.5029265880584717
+INFO:root:Function Accuracy: nan
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_7_1.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([1., 0., 0.,  ..., 0., 0., 0.], device='cuda:0')
+INFO:root:Labels: tensor([0., 1., 1.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.47698190808296204
+INFO:root:Table Accuracy: 0.521873414516449
+INFO:root:Attribute Accuracy: 0.46151119470596313
+INFO:root:Function Accuracy: nan
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_7_0.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([1., 1., 0.,  ..., 0., 0., 0.], device='cuda:0')
+INFO:root:Labels: tensor([0., 1., 1.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.4738160967826843
+INFO:root:Table Accuracy: 0.5241894125938416
+INFO:root:Attribute Accuracy: 0.4564562141895294
+INFO:root:Function Accuracy: nan
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_6_1.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([1., 1., 0.,  ..., 0., 0., 0.], device='cuda:0')
+INFO:root:Labels: tensor([0., 1., 1.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.49525126814842224
+INFO:root:Table Accuracy: 0.5398867726325989
+INFO:root:Attribute Accuracy: 0.4798687696456909
+INFO:root:Function Accuracy: nan
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_6_0.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([1., 1., 1.,  ..., 1., 1., 0.], device='cuda:0')
+INFO:root:Labels: tensor([0., 1., 1.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.4864133894443512
+INFO:root:Table Accuracy: 0.4951106905937195
+INFO:root:Attribute Accuracy: 0.4834161102771759
+INFO:root:Function Accuracy: nan
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Start logging at: Wed Jan 25 16:22:28 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_0.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([1., 1., 1.,  ..., 0., 0., 0.], device='cuda:0')
+INFO:root:Labels: tensor([0., 1., 1.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.5176757574081421
+INFO:root:Table Accuracy: 0.5367987751960754
+INFO:root:Attribute Accuracy: 0.5110855102539062
+INFO:root:Function Accuracy: nan
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_1_0.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([0., 0., 0.,  ..., 0., 0., 0.], device='cuda:0')
+INFO:root:Labels: tensor([0., 1., 1.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.4691333472728729
+INFO:root:Table Accuracy: 0.5241894125938416
+INFO:root:Attribute Accuracy: 0.45015963912010193
+INFO:root:Function Accuracy: nan
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Start logging at: Wed Jan 25 16:25:10 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 0 layers!
+INFO:root:----> Epoch 1
+INFO:root:Start logging at: Wed Jan 25 17:09:01 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Start logging at: Wed Jan 25 22:34:01 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 0 layers!
+INFO:root:----> Epoch 1
+INFO:root:----> Epoch 2
+INFO:root:Execution time for RESQUE_BERT_FREEZED_SQLSHARE_0 is 13.45576434135437 minutes
+INFO:root:Start logging at: Wed Jan 25 22:47:56 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 0 layers!
+INFO:root:----> Epoch 1
+INFO:root:Start logging at: Wed Jan 25 22:51:41 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_SQLSHARE_0_0.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([0., 0., 0.,  ..., 0., 0., 0.], device='cuda:0')
+INFO:root:Labels: tensor([0., 1., 1.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.6060546040534973
+INFO:root:Table Accuracy: 0.6569737792015076
+INFO:root:Attribute Accuracy: 0.5885065793991089
+INFO:root:Function Accuracy: nan
+INFO:root:Start logging at: Wed Jan 25 22:52:16 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_SQLSHARE_0_1.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([0., 0., 0.,  ..., 0., 1., 0.], device='cuda:0')
+INFO:root:Labels: tensor([0., 1., 1.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.6178604364395142
+INFO:root:Table Accuracy: 0.6562017798423767
+INFO:root:Attribute Accuracy: 0.6046470403671265
+INFO:root:Function Accuracy: nan
+INFO:root:Start logging at: Wed Jan 25 23:00:05 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 0 layers!
+INFO:root:----> Epoch 1
+INFO:root:----> Epoch 2
+INFO:root:----> Epoch 3
+INFO:root:Execution time for RESQUE_BERT_FREEZED_SQLSHARE_0 is 20.199543623129525 minutes
+INFO:root:Start logging at: Wed Jan 25 23:24:25 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_SQLSHARE_0_2.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([0., 0., 0.,  ..., 0., 0., 0.], device='cuda:0')
+INFO:root:Labels: tensor([0., 1., 1.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Total Accuracy: 0.6154860854148865
+INFO:root:Table Accuracy: 0.6487390995025635
+INFO:root:Attribute Accuracy: 0.6040262579917908
+INFO:root:Function Accuracy: nan
+INFO:root:Start logging at: Mon Jan 30 08:39:55 2023
+INFO:root:Start logging at: Mon Jan 30 08:41:18 2023
+INFO:root:Start logging at: Mon Jan 30 08:42:46 2023
+INFO:root:Start logging at: Mon Jan 30 08:45:35 2023
+INFO:root:Start logging at: Mon Jan 30 09:02:21 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/vocab.txt HTTP/1.1" 200 0
+INFO:root:Start logging at: Mon Jan 30 09:04:47 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 0 layers!
+INFO:root:----> Epoch 1
+INFO:root:----> Epoch 2
+INFO:root:----> Epoch 3
+INFO:root:Execution time for RESQUE_BERT_FREEZED_SQLSHARE_0 is 72.49336957534155 minutes
+INFO:root:Start logging at: Mon Jan 30 10:17:43 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_SQLSHARE_0_2.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([0., 0., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Labels: tensor([0., 1., 1.,  ..., 0., 1., 0.], device='cuda:0')
+INFO:root:Total Accuracy: 0.6180722117424011
+INFO:root:Table Accuracy: 0.6610600352287292
+INFO:root:Attribute Accuracy: 0.601951003074646
+INFO:root:Function Accuracy: nan
+INFO:root:Start logging at: Mon Jan 30 10:21:05 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_SQLSHARE_0_1.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([0., 0., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Labels: tensor([0., 1., 1.,  ..., 0., 1., 0.], device='cuda:0')
+INFO:root:Total Accuracy: 0.6180722117424011
+INFO:root:Table Accuracy: 0.6610600352287292
+INFO:root:Attribute Accuracy: 0.601951003074646
+INFO:root:Function Accuracy: nan
+INFO:root:Start logging at: Mon Jan 30 10:23:14 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_SQLSHARE_0_1.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([0., 0., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Labels: tensor([0., 1., 1.,  ..., 0., 1., 0.], device='cuda:0')
+INFO:root:Total Accuracy: 0.6180722117424011
+INFO:root:Table Accuracy: 0.6610600352287292
+INFO:root:Attribute Accuracy: 0.601951003074646
+INFO:root:Function Accuracy: nan
+INFO:root:Start logging at: Mon Jan 30 11:01:24 2023
+INFO:root:Start logging at: Mon Jan 30 11:01:57 2023
+INFO:root:Start logging at: Mon Jan 30 11:02:25 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 4 layers!
+INFO:root:----> Epoch 1
+INFO:root:----> Epoch 2
+INFO:root:----> Epoch 3
+INFO:root:Execution time for RESQUE_BERT_FREEZED_SQLSHARE_4 is 64.47352749109268 minutes
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 3 layers!
+INFO:root:----> Epoch 1
+INFO:root:Start logging at: Mon Jan 30 12:19:38 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_SQLSHARE_4_2.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([1., 0., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Labels: tensor([0., 1., 1.,  ..., 0., 1., 0.], device='cuda:0')
+INFO:root:Total Accuracy: 0.624099850654602
+INFO:root:Table Accuracy: 0.6677097678184509
+INFO:root:Attribute Accuracy: 0.607745349407196
+INFO:root:Function Accuracy: nan
+INFO:root:Start logging at: Mon Jan 30 12:21:50 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 3 layers!
+INFO:root:----> Epoch 1
+INFO:root:----> Epoch 2
+INFO:root:----> Epoch 3
+INFO:root:Execution time for RESQUE_BERT_FREEZED_SQLSHARE_3 is 34.508048951625824 minutes
+INFO:root:Start logging at: Mon Jan 30 13:28:21 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_SQLSHARE_3_2.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([1., 0., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Labels: tensor([0., 1., 1.,  ..., 0., 1., 0.], device='cuda:0')
+INFO:root:Total Accuracy: 0.6348749399185181
+INFO:root:Table Accuracy: 0.6950909495353699
+INFO:root:Attribute Accuracy: 0.6122928261756897
+INFO:root:Function Accuracy: nan
+INFO:root:Start logging at: Mon Jan 30 13:34:33 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 3 layers!
+INFO:root:----> Epoch 1
+INFO:root:----> Epoch 2
+INFO:root:Execution time for RESQUE_BERT_FREEZED_SQLSHARE_3 is 46.62959127426147 minutes
+INFO:root:Start logging at: Mon Jan 30 14:22:10 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_SQLSHARE_3_1.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([1., 0., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Labels: tensor([0., 1., 1.,  ..., 0., 1., 0.], device='cuda:0')
+INFO:root:Total Accuracy: 0.6329545974731445
+INFO:root:Table Accuracy: 0.6823782324790955
+INFO:root:Attribute Accuracy: 0.6144198179244995
+INFO:root:Function Accuracy: nan
+INFO:root:Start logging at: Mon Jan 30 14:26:35 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:RESQUE_BERT_FREEZED_SQLSHARE_3_0.pt
+INFO:root:Statistics:
+INFO:root:Predictions: tensor([0., 0., 0.,  ..., 1., 1., 1.], device='cuda:0')
+INFO:root:Labels: tensor([0., 1., 1.,  ..., 0., 1., 0.], device='cuda:0')
+INFO:root:Total Accuracy: 0.6370619535446167
+INFO:root:Table Accuracy: 0.6970467567443848
+INFO:root:Attribute Accuracy: 0.6145665049552917
+INFO:root:Function Accuracy: nan
+INFO:root:Start logging at: Mon Jan 30 14:33:40 2023
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+INFO:root:Freezing 2 layers!
+INFO:root:----> Epoch 1
+INFO:root:----> Epoch 2

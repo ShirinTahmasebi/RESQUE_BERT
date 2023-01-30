@@ -6,7 +6,7 @@ sys.path.append('../')
 from imports import *
 
 def create_mock_bert_processed_dataset():
-    tokenizer = BertTokenizer.from_pretrained(CONSTANTS.BERT_MODEL_UNCASED)
+    tokenizer = BertTokenizer.from_pretrained(CONSTANTS.BERT_MODEL_NAME)
 
     q1 = "[CLS] select [CLS] name , [CLS] type from [CLS] dbobjects where [CLS] type = 'u' and [CLS] access = 'u' and [CLS] name not in ( 'loadevents' , 'queryresults' ) order by [CLS] name"
     q2 = "[CLS] select [CLS] name , [CLS] type from [CLS] dbobjects where [CLS] type = 'u' and [CLS] name not in ( 'loadevents' , 'queryresults' ) order by [CLS] name"

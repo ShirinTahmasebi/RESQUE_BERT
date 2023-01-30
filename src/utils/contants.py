@@ -25,16 +25,11 @@ class Contants(object):
     @constant
     def BERT_MODEL_CODEBERT():
         return "microsoft/codebert-base"
-    
-    @constant
-    def BERT_MODEL_CODE_BERT():
-        if Contants.IS_ROBERTA.__get__(0):
-            return "microsoft/codebert-base"
 
     # TODO Shirin: Revise all the uses!
     @constant
     def BERT_MODEL_NAME():
-        return Contants.BERT_MODEL_CODE_BERT.__get__(0)
+        return Contants.BERT_MODEL_CODEBERT.__get__(0)
 
     @constant
     def MAX_TOKEN_COUNT():
@@ -54,53 +49,109 @@ class Contants(object):
         return 5
 
     @constant
-    def DATA_DIR_TRAIN_RAW():
-        return 'data/processed_data/train/basic.csv'
+    def DATA_DIR_TRAIN_SDSS_RAW():
+        return 'data/processed_data/train_sdss/basic.csv'
     
     @constant
-    def DATA_DIR_TRAIN_WITH_CLS():
-        return 'data/processed_data/train/with_cls.csv'
+    def DATA_DIR_TRAIN_SDSS_WITH_CLS():
+        return 'data/processed_data/train_sdss/with_cls.csv'
 
     @constant
-    def DATA_DIR_TRAIN_TOKENIZED_BERT():
-        return 'data/processed_data/train/tokenized_bert.csv'
+    def DATA_DIR_TRAIN_SDSS_TOKENIZED_BERT():
+        return 'data/processed_data/train_sdss/tokenized_bert.csv'
 
     @constant
-    def DATA_DIR_TRAIN_TOKENIZED_CODEBERT():
-        return 'data/processed_data/train/tokenized_codebert.csv'
+    def DATA_DIR_TRAIN_SDSS_TOKENIZED_CODEBERT():
+        return 'data/processed_data/train_sdss/tokenized_codebert.csv'
 
     @constant
-    def DATA_DIR_TEST_RAW():
-        return 'data/processed_data/test/basic.csv'
+    def DATA_DIR_TEST_SDSS_RAW():
+        return 'data/processed_data/test_sdss/basic.csv'
     
     @constant
-    def DATA_DIR_TEST_WITH_CLS():
-        return 'data/processed_data/test/with_cls.csv'
+    def DATA_DIR_TEST_SDSS_WITH_CLS():
+        return 'data/processed_data/test_sdss/with_cls.csv'
 
     @constant
-    def DATA_DIR_TEST_TOKENIZED_BERT():
-        return 'data/processed_data/test/tokenized_bert.csv'
+    def DATA_DIR_TEST_SDSS_TOKENIZED_BERT():
+        return 'data/processed_data/test_sdss/tokenized_bert.csv'
 
     @constant
-    def DATA_DIR_TEST_TOKENIZED_CODEBERT():
-        return 'data/processed_data/test/tokenized_codebert.csv'
+    def DATA_DIR_TEST_SDSS_TOKENIZED_CODEBERT():
+        return 'data/processed_data/test_sdss/tokenized_codebert.csv'
 
     @constant
-    def DATA_DIR_VAL_RAW():
-        return 'data/processed_data/val/basic.csv'
+    def DATA_DIR_VAL_SDSS_RAW():
+        return 'data/processed_data/val_sdss/basic.csv'
     
     @constant
-    def DATA_DIR_VAL_WITH_CLS():
-        return 'data/processed_data/val/with_cls.csv'
+    def DATA_DIR_VAL_SDSS_WITH_CLS():
+        return 'data/processed_data/val_sdss/with_cls.csv'
+
+    @constant
+    def DATA_DIR_VAL_SDSS_TOKENIZED_BERT():
+        return 'data/processed_data/val_sdss/tokenized_bert.csv'
+
+    @constant
+    def DATA_DIR_VAL_SDSS_TOKENIZED_CODEBERT():
+        return 'data/processed_data/val_sdss/tokenized_codebert.csv'
 
     
-    @constant
-    def DATA_DIR_VAL_TOKENIZED_BERT():
-        return 'data/processed_data/val/tokenized_bert.csv'
+    ################# SqlShare
 
     @constant
-    def DATA_DIR_VAL_TOKENIZED_CODEBERT():
-        return 'data/processed_data/val/tokenized_codebert.csv'
+    def DATA_DIR_TRAIN_SQLSHARE_RAW():
+        return 'data/processed_data/train_sqlshare/basic.csv'
+    
+    @constant
+    def DATA_DIR_TRAIN_SQLSHARE_WITH_CLS():
+        return 'data/processed_data/train_sqlshare/with_cls.csv'
+
+    @constant
+    def DATA_DIR_TRAIN_SQLSHARE_TOKENIZED_BERT():
+        return 'data/processed_data/train_sqlshare/tokenized_bert.csv'
+
+    @constant
+    def DATA_DIR_TRAIN_SQLSHARE_TOKENIZED_CODEBERT():
+        return 'data/processed_data/train_sqlshare/tokenized_codebert.csv'
+
+    @constant
+    def DATA_DIR_TEST_SQLSHARE_RAW():
+        return 'data/processed_data/test_sqlshare/basic.csv'
+    
+    @constant
+    def DATA_DIR_TEST_SQLSHARE_WITH_CLS():
+        return 'data/processed_data/test_sqlshare/with_cls.csv'
+
+    @constant
+    def DATA_DIR_TEST_SQLSHARE_TOKENIZED_BERT():
+        return 'data/processed_data/test_sqlshare/tokenized_bert.csv'
+
+    @constant
+    def DATA_DIR_TEST_SQLSHARE_TOKENIZED_CODEBERT():
+        return 'data/processed_data/test_sqlshare/tokenized_codebert.csv'
+
+    @constant
+    def DATA_DIR_VAL_SQLSHARE_RAW():
+        return 'data/processed_data/val_sqlshare/basic.csv'
+    
+    @constant
+    def DATA_DIR_VAL_SQLSHARE_WITH_CLS():
+        return 'data/processed_data/val_sqlshare/with_cls.csv'
+
+    @constant
+    def DATA_DIR_VAL_SQLSHARE_TOKENIZED_BERT():
+        return 'data/processed_data/val_sqlshare/tokenized_bert.csv'
+
+    @constant
+    def DATA_DIR_VAL_SQLSHARE_TOKENIZED_CODEBERT():
+        return 'data/processed_data/val_sqlshare/tokenized_codebert.csv'
+
+    #########################
+
+    @constant
+    def LOG_PATH():
+        return 'trace.log'
     
     @constant
     def TABLE_TYPE_ID():

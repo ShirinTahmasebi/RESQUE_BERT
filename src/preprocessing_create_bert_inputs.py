@@ -52,7 +52,7 @@ def extract_classification_type_ids(input):
     return classification_type_ids
 
 
-def extract_token_type_ids(valid_tokens):
+def extract_token_type_ids(valid_tokens, token_sep_id):
     # Create token_type_ids
     # Token_type_ids are 0s for the 1st sentence, 1 for the 2nd sentence, and so on.
     token_type_ids = []
@@ -63,7 +63,7 @@ def extract_token_type_ids(valid_tokens):
         current_type_id = type_id_tracker % 2
         token_type_ids.append(current_type_id)
 
-        if item == 102:  # 102 is for the [SEP] token
+        if item == token_sep_id:  # token_sep_id is the id for the [SEP] token
             type_id_tracker = type_id_tracker + 1
 
     token_type_id_tensorized = torch.tensor(
@@ -78,6 +78,11 @@ def tokenize_single_session(single_session_df, tokenizer):
     list_of_input_queries = []
     session_df_list = []
 
+    TOKEN_SEP = tokenizer.sep_token
+    TOKEN_SEP_ID = tokenizer.sep_token_id
+    TOKEN_CLS = tokenizer.cls_token
+    TOKEN_CLS_ID = tokenizer.cls_token_id
+
     for query_index, query in enumerate(single_session_df["statement_with_cls"]):
 
         # For the last query, we need to skip this procedure. Because there would be no next query!
@@ -89,12 +94,12 @@ def tokenize_single_session(single_session_df, tokenizer):
 
         # Concatenate the queries which have been read so far.
         list_of_input_queries.append(query)
-        input = "[SEP]".join(list_of_input_queries) \
+        input = TOKEN_SEP.join(list_of_input_queries) \
             if len(list_of_input_queries) > 1 else list_of_input_queries[0]
 
         converted_query = input\
-            .replace("[ATTR_CLS]", "[CLS]")\
-            .replace("[TBL_CLS]", "[CLS]")
+            .replace("[ATTR_CLS]", TOKEN_CLS)\
+            .replace("[TBL_CLS]", TOKEN_CLS)
 
         tokenized_query = tokenizer.encode_plus(
             converted_query,
@@ -113,57 +118,69 @@ def tokenize_single_session(single_session_df, tokenizer):
             break
 
         classification_type_ids = extract_classification_type_ids(input)
-        token_type_id_tensorized = extract_token_type_ids(valid_tokens)
+        token_type_id_tensorized = extract_token_type_ids(
+            valid_tokens, TOKEN_SEP_ID)
         labels = extract_label_names(input, next_query)
 
-        session_df_list.append({
+        session_df_item = {
             'input_id': convert_pt_tensor_to_serializable_str(tokenized_query['input_ids']),
             'attention_mask': convert_pt_tensor_to_serializable_str(tokenized_query['attention_mask']),
             'token_type_ids': convert_pt_tensor_to_serializable_str(token_type_id_tensorized),
-            'cls_mask': [1 * (x == 101) for x in tokenized_query['input_ids'][0].numpy()],
+            'cls_mask': [1 * (x == TOKEN_CLS_ID) for x in tokenized_query['input_ids'][0].numpy()],
             'labels': labels,
             'type_ids': classification_type_ids,
-        })
+        }
+
+        # Some validation check!
+        masked_arr = [True if item == 1 else False for item in session_df_item['cls_mask']]
+        cls_tokens_set = set(
+            (tokenized_query['input_ids'][0][masked_arr]).numpy())
+        assert (len(cls_tokens_set) == 1)
+        assert (TOKEN_CLS_ID in cls_tokens_set)
+
+        session_df_list.append(session_df_item)
 
     return session_df_list
 
 
-def execute(with_cls_path, tokenized_path, tokenizer, name=''):
-    data_with_cls_path = get_absolute_path(with_cls_path)
-    tokenized_data_path = get_absolute_path(tokenized_path)
+def execute(with_cls_path, tokenized_path, tokenizer, name = ''):
+    data_with_cls_path=get_absolute_path(with_cls_path)
+    tokenized_data_path=get_absolute_path(tokenized_path)
 
-    df = pd.read_csv(data_with_cls_path)
-    unique_session_id_list = df['session_id'].unique()
+    df=pd.read_csv(data_with_cls_path)
+    unique_session_id_list=df['session_id'].unique()
 
-    final_df_list = []
+    final_df_list=[]
 
     for index, session_id in enumerate(unique_session_id_list):
-        single_session_df = df[df['session_id'] == session_id].copy()
+        single_session_df=df[df['session_id'] == session_id].copy()
 
-        single_session_result = tokenize_single_session(single_session_df, tokenizer)
+        single_session_result=tokenize_single_session(
+            single_session_df, tokenizer)
         final_df_list.extend(single_session_result)
 
         if index % 1000 == 0:
             print(f"Tokenization is in progress: {index}")
 
-    final_df = pd.DataFrame(final_df_list)
+    final_df=pd.DataFrame(final_df_list)
     final_df.to_csv(tokenized_data_path)
 
 
-tokenizer = RobertaTokenizer.from_pretrained(CONSTANTS.BERT_MODEL_CODEBERT)
-execute(
-    CONSTANTS.DATA_DIR_TRAIN_WITH_CLS,
-    CONSTANTS.DATA_DIR_TRAIN_TOKENIZED_CODEBERT,
-    tokenizer,
-    'Train - CODEBERT'
-)
+# tokenizer=RobertaTokenizer.from_pretrained(CONSTANTS.BERT_MODEL_CODEBERT)
+# execute(
+#     CONSTANTS.DATA_DIR_TRAIN_WITH_CLS,
+#     CONSTANTS.DATA_DIR_TRAIN_TOKENIZED_CODEBERT,
+#     tokenizer,
+#     'Train - CODEBERT'
+# )
 
-execute(
-    CONSTANTS.DATA_DIR_TEST_WITH_CLS,
-    CONSTANTS.DATA_DIR_TEST_TOKENIZED_CODEBERT,
-    tokenizer,
-    'Test - CODEBERT'
-)
+# execute(
+#     CONSTANTS.DATA_DIR_TEST_WITH_CLS,
+#     CONSTANTS.DATA_DIR_TEST_TOKENIZED_CODEBERT,
+#     tokenizer,
+#     'Test - CODEBERT'
+# )
+
 # execute(
 #     CONSTANTS.DATA_DIR_VAL_WITH_CLS,
 #     CONSTANTS.DATA_DIR_VAL_TOKENIZED_CODEBERT,
@@ -173,18 +190,19 @@ execute(
 
 tokenizer = BertTokenizer.from_pretrained(CONSTANTS.BERT_MODEL_BERT_UNCASED)
 execute(
-    CONSTANTS.DATA_DIR_TRAIN_WITH_CLS,
-    CONSTANTS.DATA_DIR_TRAIN_TOKENIZED_BERT,
+    CONSTANTS.DATA_DIR_TRAIN_SQLSHARE_WITH_CLS,
+    CONSTANTS.DATA_DIR_TRAIN_SQLSHARE_TOKENIZED_BERT,
     tokenizer,
     'Train - BERT'
 )
 
 execute(
-    CONSTANTS.DATA_DIR_TEST_WITH_CLS,
-    CONSTANTS.DATA_DIR_TEST_TOKENIZED_BERT,
+    CONSTANTS.DATA_DIR_TEST_SQLSHARE_WITH_CLS,
+    CONSTANTS.DATA_DIR_TEST_SQLSHARE_TOKENIZED_BERT,
     tokenizer,
     'Test - BERT'
 )
+
 # execute(
 #     CONSTANTS.DATA_DIR_VAL_WITH_CLS,
 #     CONSTANTS.DATA_DIR_VAL_TOKENIZED_BERT,
