@@ -1,4 +1,4 @@
-from Projects.RESQU_BERT.src.utils.config_key_data_constants import CONFIG_KEYS_DATA
+from utils.config_key_data_constants import CONFIG_KEYS_DATA
 from utils.utils import *
 
 train_config_sqlshare_bert = {

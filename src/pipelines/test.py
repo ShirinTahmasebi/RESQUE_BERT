@@ -1,5 +1,4 @@
 from utils.utils import *
-from models.bert_based_model import ResqueRoBertaModel, ResqueBertModel
 from data.resque_dataloader import TestDataLoader
 from data.resque_dataset import ResqueDataset
 from imports import *
@@ -19,7 +18,7 @@ def test_epoch(dataloader, model, device, print_to_log=True):
     func_pred_list = torch.Tensor().to(device)
     func_lbl_list = torch.Tensor().to(device)
 
-    for i, batch_data in enumerate(dataloader):
+    for _, batch_data in enumerate(dataloader):
         input_ids = batch_data["input_ids"].to(device)
         attention_mask = batch_data["attention_mask"].to(device)
         token_type_ids = batch_data["token_type_ids"].to(device)
