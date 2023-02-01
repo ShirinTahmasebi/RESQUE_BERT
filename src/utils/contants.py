@@ -108,6 +108,10 @@ class Contants(object):
         return 'data/processed_data/train_sqlshare/with_cls.csv'
 
     @constant
+    def DATA_DIR_TRAIN_SQLSHARE_TOKENIZED_BERT_CONCAT():
+        return 'data/processed_data/train_sqlshare/tokenized_bert_concat.csv'
+
+    @constant
     def DATA_DIR_TRAIN_SQLSHARE_TOKENIZED_BERT():
         return 'data/processed_data/train_sqlshare/tokenized_bert.csv'
 

@@ -67,12 +67,12 @@ def test_epoch(dataloader, model, device, print_to_log=True):
 
 
 def execute(test_configs):
-    from utils.config_key_constants import CONFIG_KEYS
+    from Projects.RESQU_BERT.src.utils.config_key_model_constants import CONFIG_KEYS_MODEL
 
-    MODEL_NAME_LIST = test_configs[CONFIG_KEYS.MODEL_NAMES_LIST]
-    MODEL_TYPE_CLASS = test_configs[CONFIG_KEYS.MODEL_TYPE_CLASS]
-    MODEL_TYPE_BASE_NAME = test_configs[CONFIG_KEYS.MODEL_TYPE_BASE_NAME]
-    TEST_DATASET_DIR = test_configs[CONFIG_KEYS.DATASET_PATH]
+    MODEL_NAME_LIST = test_configs[CONFIG_KEYS_MODEL.MODEL_NAMES_LIST]
+    MODEL_TYPE_CLASS = test_configs[CONFIG_KEYS_MODEL.MODEL_TYPE_CLASS]
+    MODEL_TYPE_BASE_NAME = test_configs[CONFIG_KEYS_MODEL.MODEL_TYPE_BASE_NAME]
+    TEST_DATASET_DIR = test_configs[CONFIG_KEYS_MODEL.DATASET_PATH]
 
     for model_name in MODEL_NAME_LIST:
         model = load_checkpoint(

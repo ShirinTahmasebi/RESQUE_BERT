@@ -9,7 +9,7 @@ def constant(f):
         return f()
     return property(fget, fset)
 
-class ConfigKeys(object):
+class ConfigKeysModel(object):
 
     @constant
     def NUMBER_OF_EPOCHS():
@@ -53,4 +53,4 @@ class ConfigKeys(object):
         return "model_names_list"
 
 
-CONFIG_KEYS = ConfigKeys()
+CONFIG_KEYS_MODEL = ConfigKeysModel()

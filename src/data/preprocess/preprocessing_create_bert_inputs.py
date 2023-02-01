@@ -132,7 +132,8 @@ def tokenize_single_session(single_session_df, tokenizer):
         }
 
         # Some validation check!
-        masked_arr = [True if item == 1 else False for item in session_df_item['cls_mask']]
+        masked_arr = [True if item ==
+                      1 else False for item in session_df_item['cls_mask']]
         cls_tokens_set = set(
             (tokenized_query['input_ids'][0][masked_arr]).numpy())
         assert (len(cls_tokens_set) == 1)
@@ -143,69 +144,39 @@ def tokenize_single_session(single_session_df, tokenizer):
     return session_df_list
 
 
-def execute(with_cls_path, tokenized_path, tokenizer, name = ''):
-    data_with_cls_path=get_absolute_path(with_cls_path)
-    tokenized_data_path=get_absolute_path(tokenized_path)
+def execute(with_cls_path, tokenized_path, tokenizer, name=''):
+    data_with_cls_path = get_absolute_path(with_cls_path)
+    tokenized_data_path = get_absolute_path(tokenized_path)
 
-    df=pd.read_csv(data_with_cls_path)
-    unique_session_id_list=df['session_id'].unique()
+    df = pd.read_csv(data_with_cls_path)
+    unique_session_id_list = df['session_id'].unique()
 
-    final_df_list=[]
+    final_df_list = []
 
     for index, session_id in enumerate(unique_session_id_list):
-        single_session_df=df[df['session_id'] == session_id].copy()
+        single_session_df = df[df['session_id'] == session_id].copy()
 
-        single_session_result=tokenize_single_session(
+        single_session_result = tokenize_single_session(
             single_session_df, tokenizer)
         final_df_list.extend(single_session_result)
 
         if index % 1000 == 0:
             print(f"Tokenization is in progress: {index}")
 
-    final_df=pd.DataFrame(final_df_list)
+    final_df = pd.DataFrame(final_df_list)
     final_df.to_csv(tokenized_data_path)
 
 
-# tokenizer=RobertaTokenizer.from_pretrained(CONSTANTS.BERT_MODEL_CODEBERT)
-# execute(
-#     CONSTANTS.DATA_DIR_TRAIN_WITH_CLS,
-#     CONSTANTS.DATA_DIR_TRAIN_TOKENIZED_CODEBERT,
-#     tokenizer,
-#     'Train - CODEBERT'
-# )
 
-# execute(
-#     CONSTANTS.DATA_DIR_TEST_WITH_CLS,
-#     CONSTANTS.DATA_DIR_TEST_TOKENIZED_CODEBERT,
-#     tokenizer,
-#     'Test - CODEBERT'
-# )
+# train_tokenized = get_absolute_path(CONSTANTS.DATA_DIR_TRAIN_SQLSHARE_TOKENIZED_BERT)
+# val_tokenized = get_absolute_path(CONSTANTS.DATA_DIR_VAL_SQLSHARE_TOKENIZED_BERT)
+# output = get_absolute_path(CONSTANTS.DATA_DIR_TRAIN_SQLSHARE_TOKENIZED_BERT_CONCAT)
 
-# execute(
-#     CONSTANTS.DATA_DIR_VAL_WITH_CLS,
-#     CONSTANTS.DATA_DIR_VAL_TOKENIZED_CODEBERT,
-#     tokenizer,
-#     'Validation - CODEBERT'
-# )
+# train_df = pd.read_csv(train_tokenized)
+# val_df = pd.read_csv(val_tokenized)
 
-tokenizer = BertTokenizer.from_pretrained(CONSTANTS.BERT_MODEL_BERT_UNCASED)
-execute(
-    CONSTANTS.DATA_DIR_TRAIN_SQLSHARE_WITH_CLS,
-    CONSTANTS.DATA_DIR_TRAIN_SQLSHARE_TOKENIZED_BERT,
-    tokenizer,
-    'Train - BERT'
-)
 
-execute(
-    CONSTANTS.DATA_DIR_TEST_SQLSHARE_WITH_CLS,
-    CONSTANTS.DATA_DIR_TEST_SQLSHARE_TOKENIZED_BERT,
-    tokenizer,
-    'Test - BERT'
-)
+# df_list = [train_df, val_df]
+# concat_df = pd.concat(df_list)
+# concat_df.to_csv(output)
 
-# execute(
-#     CONSTANTS.DATA_DIR_VAL_WITH_CLS,
-#     CONSTANTS.DATA_DIR_VAL_TOKENIZED_BERT,
-#     tokenizer,
-#     'Validation - BERT'
-# )
