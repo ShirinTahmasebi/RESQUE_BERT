@@ -19,11 +19,6 @@ class Contants(object):
     def BERT_MODEL_CODEBERT():
         return "microsoft/codebert-base"
 
-    # TODO Shirin: Revise all the uses!
-    @constant
-    def BERT_MODEL_NAME():
-        return Contants.BERT_MODEL_CODEBERT.__get__(0)
-
     @constant
     def MAX_TOKEN_COUNT():
         return 512
@@ -96,6 +91,10 @@ class Contants(object):
         return 'data/processed_data/train_sqlshare/basic.csv'
 
     @constant
+    def DATA_DIR_TRAIN_SQLSHARE_RAW_NO_FUNC():
+        return 'data/processed_data/train_sqlshare/basic_no_func.csv'
+
+    @constant
     def DATA_DIR_TRAIN_SQLSHARE_WITH_CLS():
         return 'data/processed_data/train_sqlshare/with_cls.csv'
 
@@ -116,6 +115,10 @@ class Contants(object):
         return 'data/processed_data/test_sqlshare/basic.csv'
 
     @constant
+    def DATA_DIR_TEST_SQLSHARE_RAW_NO_FUNC():
+        return 'data/processed_data/test_sqlshare/basic_no_func.csv'
+
+    @constant
     def DATA_DIR_TEST_SQLSHARE_WITH_CLS():
         return 'data/processed_data/test_sqlshare/with_cls.csv'
 
@@ -130,6 +133,10 @@ class Contants(object):
     @constant
     def DATA_DIR_VAL_SQLSHARE_RAW():
         return 'data/processed_data/val_sqlshare/basic.csv'
+
+    @constant
+    def DATA_DIR_VAL_SQLSHARE_RAW_NO_FUNC():
+        return 'data/processed_data/val_sqlshare/basic_no_func.csv'
 
     @constant
     def DATA_DIR_VAL_SQLSHARE_WITH_CLS():

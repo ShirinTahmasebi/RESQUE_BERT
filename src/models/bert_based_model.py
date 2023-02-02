@@ -1,4 +1,3 @@
-from typing import Any, Callable
 from transformers import PreTrainedModel, BertPreTrainedModel, RobertaPreTrainedModel, BertModel, RobertaModel
 from imports import *
 import sys

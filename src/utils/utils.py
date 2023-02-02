@@ -6,6 +6,29 @@ import sys
 sys.path.append('../')
 
 
+def replace_count_function(query):
+    processed_clause = query
+
+    import re
+    regex_count = 'count\s*\(\s*(\*|[a-zA-Z_0-9]+)\s*\)'
+    regex_time = '(time\s*\(\s*\))'
+
+    find_matches_count = re.search(regex_count, query, re.IGNORECASE)
+    find_matches_time = re.search(regex_time, query, re.IGNORECASE)
+
+    if find_matches_count:
+        column_name = find_matches_count.group(1)
+        if column_name == '*':
+            column_name = 'all'
+        processed_clause = re.sub(
+            regex_count, f"count_{column_name}", processed_clause)
+
+    if find_matches_time:
+        column_name = find_matches_time.group(1)
+        processed_clause = re.sub(regex_time, "time_", processed_clause)
+
+    return processed_clause
+
 ########################################################################
 # Serializing and deserializing: String to PT Tensor and vice versa!
 

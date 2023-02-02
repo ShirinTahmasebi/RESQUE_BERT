@@ -66,7 +66,7 @@ def test_epoch(dataloader, model, device, print_to_log=True):
 
 
 def execute(test_configs):
-    from Projects.RESQU_BERT.src.utils.config_key_model_constants import CONFIG_KEYS_MODEL
+    from utils.config_key_model_constants import CONFIG_KEYS_MODEL
 
     MODEL_NAME_LIST = test_configs[CONFIG_KEYS_MODEL.MODEL_NAMES_LIST]
     MODEL_TYPE_CLASS = test_configs[CONFIG_KEYS_MODEL.MODEL_TYPE_CLASS]

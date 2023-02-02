@@ -112,7 +112,7 @@ def train_model(train_dataset_dir, model, output_model_prefix, number_of_epochs)
 
 
 def execute(train_configs):
-    from Projects.RESQU_BERT.src.utils.config_key_model_constants import CONFIG_KEYS_MODEL
+    from utils.config_key_model_constants import CONFIG_KEYS_MODEL
 
     NuM_OF_EPOCHS = train_configs[CONFIG_KEYS_MODEL.NUMBER_OF_EPOCHS]
     MAX_NUM_OF_FREEZED_LAYERS = train_configs[CONFIG_KEYS_MODEL.NUM_OF_FREEZED_LAYERS_MAX]

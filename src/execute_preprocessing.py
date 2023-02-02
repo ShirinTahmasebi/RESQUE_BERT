@@ -16,4 +16,27 @@ def execute_preprocess_pipeline(config):
     execute_create_bert_inputs(with_cls_path, tokenized_path, tokenizer, name)
 
 
-execute_preprocess_pipeline(train_config_sqlshare_bert)
+# execute_preprocess_pipeline(val_config_sqlshare_bert)
+
+# input_dataset_path = get_absolute_path(CONSTANTS.DATA_DIR_VAL_SQLSHARE_RAW)
+# output_dataset_path = get_absolute_path(
+#     CONSTANTS.DATA_DIR_VAL_SQLSHARE_RAW_NO_FUNC)
+
+# train_sqlshare_df = pd.read_csv(input_dataset_path)
+
+# train_sqlshare_df['statement'] = train_sqlshare_df.apply(
+#     lambda row: replace_count_function(row.statement),
+#     axis=1
+# )
+# train_sqlshare_df.to_csv(output_dataset_path)
+
+
+train_path = get_absolute_path(CONSTANTS.DATA_DIR_TRAIN_SQLSHARE_TOKENIZED_BERT)
+val_path = get_absolute_path(CONSTANTS.DATA_DIR_VAL_SQLSHARE_TOKENIZED_BERT)
+output_path = get_absolute_path(CONSTANTS.DATA_DIR_TRAIN_SQLSHARE_TOKENIZED_BERT_CONCAT)
+
+train_df = pd.read_csv(val_path)
+val_df = pd.read_csv(train_path)
+
+concat_df = pd.concat([train_df, val_df], ignore_index=True)
+concat_df.to_csv(output_path)

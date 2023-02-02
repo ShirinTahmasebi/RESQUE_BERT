@@ -1,4 +1,4 @@
-from Projects.RESQU_BERT.src.utils.config_key_model_constants import CONFIG_KEYS_MODEL
+from utils.config_key_model_constants import CONFIG_KEYS_MODEL
 from utils.contants import CONSTANTS
 from models.bert_based_model import ResqueRoBertaModel, ResqueBertModel
 

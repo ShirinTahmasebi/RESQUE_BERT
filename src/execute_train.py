@@ -81,4 +81,4 @@ def validate_config_and_train(config):
         execute_train(config)
 
 
-validate_config_and_train(train_config_sqlshare_bert_freeze_3)
+validate_config_and_train(train_config_sqlshare_bert_no_freezing_on_top_of_sdss)
