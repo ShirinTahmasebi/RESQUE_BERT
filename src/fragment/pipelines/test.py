@@ -74,7 +74,7 @@ def execute(test_configs):
     TEST_DATASET_DIR = test_configs[CONFIG_KEYS_MODEL.DATASET_PATH]
 
     for model_name in MODEL_NAME_LIST:
-        model = load_checkpoint(
+        model = load_fragment_checkpoint(
             model_name,
             MODEL_TYPE_CLASS,
             MODEL_TYPE_BASE_NAME

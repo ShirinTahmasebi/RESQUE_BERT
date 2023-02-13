@@ -127,7 +127,7 @@ def execute(train_configs):
 
     def initialize_model():
         if SHOULD_LOAD_FROM_CHECKPOINT:
-            return load_checkpoint(
+            return load_fragment_checkpoint(
                 CHECKPOINT_NAME,
                 MODEL_TYPE_CLASS,
                 MODEL_TYPE_BASE_NAME,
@@ -138,7 +138,7 @@ def execute(train_configs):
 
     for num_of_freezed_layers in list(range(MAX_NUM_OF_FREEZED_LAYERS, MIN_NUM_OF_FREEZED_LAYERS, -1)):
         model = initialize_model()
-        freeze_layers(model, num_of_freezed_layers)
+        freeze_bert_layers(model, num_of_freezed_layers)
         print_message(f"Freezing {num_of_freezed_layers} layers!")
 
         train_model(

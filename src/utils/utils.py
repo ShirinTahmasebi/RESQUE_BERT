@@ -1,5 +1,5 @@
 from enum import Enum
-from models.bert_based_model import ResqueModel
+from fragment.models.bert_based_model import ResqueModel
 import json
 from imports import *
 import sys
@@ -83,7 +83,7 @@ def get_absolute_path(path_relative_to_project_root):
 
 ########################################################################
 # Loading model
-def load_checkpoint(checkpoint_name: str, model_cls: ResqueModel, model_name: str, for_train=True):
+def load_fragment_checkpoint(checkpoint_name: str, model_cls: ResqueModel, model_name: str, for_train=True):
     model = model_cls.from_pretrained(model_name, num_labels=2)
     save_checkpoint_path = create_dir_if_necessary('checkpoints/') + \
         checkpoint_name
@@ -124,7 +124,7 @@ def print_message(message, print_to_console=True, print_to_log=True, level=loggi
 ########################################################################
 # Freezing layers of BERT and CodeBERT
 
-def freeze_layers(model, num_of_layers=0):
+def freeze_bert_layers(model, num_of_layers=0):
     if num_of_layers == 0:
         return
 

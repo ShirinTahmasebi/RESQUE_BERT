@@ -1,5 +1,8 @@
 from fragment.pipelines.test import execute as execute_test
-from fragment.pipelines.configs.test_configurations import *
+from fragment.models.bert_based_model import ResqueRoBertaModel, ResqueBertModel
+from fragment.pipelines.configs.test_configurations import test_config_sqlshare_bert
+from utils.config_key_model_constants import CONFIG_KEYS_MODEL
+from utils.contants import CONSTANTS
 
 
 def validate_config_and_test(config):
