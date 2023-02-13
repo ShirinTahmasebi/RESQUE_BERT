@@ -1,5 +1,5 @@
-from pipelines.test import execute as execute_test
-from pipelines.configs.test_configurations import *
+from fragment.pipelines.test import execute as execute_test
+from fragment.pipelines.configs.test_configurations import *
 
 
 def validate_config_and_test(config):

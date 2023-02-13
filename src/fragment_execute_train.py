@@ -1,5 +1,5 @@
-from pipelines.train import execute as execute_train
-from pipelines.configs.train_configurations import *
+from fragment.pipelines.train import execute as execute_train
+from fragment.pipelines.configs.train_configurations import *
 
 
 def validate_config_and_train(config):
