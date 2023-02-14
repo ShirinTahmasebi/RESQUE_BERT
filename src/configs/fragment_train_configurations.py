@@ -1,6 +1,6 @@
 from utils.config_key_model_constants import CONFIG_KEYS_MODEL
 from utils.contants import CONSTANTS
-from models.bert_based_model import ResqueRoBertaModel, ResqueBertModel
+from fragment.models.bert_based_model import ResqueRoBertaModel, ResqueBertModel
 
 train_config_sdss_bert_no_freezing = {
     CONFIG_KEYS_MODEL.NUMBER_OF_EPOCHS: 2,

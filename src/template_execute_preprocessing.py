@@ -1,0 +1,5 @@
+from utils.contants import CONSTANTS
+from template.data.preprocess.preprocessing_extract_templates import execute as execute_templatization
+
+# execute_templatization(CONSTANTS.DATA_DIR_TRAIN_SDSS_RAW, CONSTANTS.DATA_DIR_TRAIN_SDSS_TEMPLATIEZED)
+execute_templatization(CONSTANTS.DATA_DIR_TEST_SDSS_RAW, CONSTANTS.DATA_DIR_TEST_SDSS_TEMPLATIEZED)

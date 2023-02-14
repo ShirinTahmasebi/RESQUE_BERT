@@ -1,5 +1,5 @@
 from utils.config_key_data_constants import CONFIG_KEYS_DATA
-from fragment.data.preprocess.preprocessing_configuration import val_config_sqlshare_bert
+from configs.fragment_preprocessing_configuration import val_config_sqlshare_bert
 from fragment.data.preprocess.preprocessing_add_cls_tokens import execute as execute_add_cls_tokens
 from fragment.data.preprocess.preprocessing_create_bert_inputs import execute as execute_create_bert_inputs
 from utils.utils import *

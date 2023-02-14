@@ -2,7 +2,7 @@ from utils.config_key_model_constants import CONFIG_KEYS_MODEL
 from utils.contants import CONSTANTS
 from fragment.models.bert_based_model import ResqueRoBertaModel, ResqueBertModel
 from fragment.pipelines.train import execute as execute_train
-from fragment.pipelines.configs.train_configurations import train_config_sqlshare_bert_no_freezing_on_top_of_sdss
+from src.configs.fragment_train_configurations import train_config_sqlshare_bert_no_freezing_on_top_of_sdss
 
 
 def validate_config_and_train(config):

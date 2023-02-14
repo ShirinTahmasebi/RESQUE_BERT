@@ -1,5 +1,33 @@
 from utils.annotations import *
 
+# SDSS
+PATH_DATA_SDSS = 'data/sdss'
+
+PATH_DATA_SDSS_FRAGMENT = f'{PATH_DATA_SDSS}/fragment'
+PATH_DATA_SDSS_TEMPLATE = f'{PATH_DATA_SDSS}/template'
+
+PATH_DATA_SDSS_FRAGMENT_TRAIN = f'{PATH_DATA_SDSS_FRAGMENT}/train'
+PATH_DATA_SDSS_FRAGMENT_TEST = f'{PATH_DATA_SDSS_FRAGMENT}/test'
+PATH_DATA_SDSS_FRAGMENT_VAL = f'{PATH_DATA_SDSS_FRAGMENT}/val'
+
+PATH_DATA_SDSS_TEMPLATE_TRAIN = f'{PATH_DATA_SDSS_TEMPLATE}/train'
+PATH_DATA_SDSS_TEMPLATE_TEST = f'{PATH_DATA_SDSS_TEMPLATE}/test'
+PATH_DATA_SDSS_TEMPLATE_VAL = f'{PATH_DATA_SDSS_TEMPLATE}/val'
+
+
+# SQLShare
+PATH_DATA_SQLSHARE = 'data/sqlshare' 
+
+PATH_DATA_SQLSHARE_FRAGMENT = f'{PATH_DATA_SQLSHARE}/fragment'
+PATH_DATA_SQLSHARE_TEMPLATE = f'{PATH_DATA_SQLSHARE}/template'
+
+PATH_DATA_SQLSHARE_FRAGMENT_TRAIN = f'{PATH_DATA_SQLSHARE_FRAGMENT}/train'
+PATH_DATA_SQLSHARE_FRAGMENT_TEST = f'{PATH_DATA_SQLSHARE_FRAGMENT}/test'
+PATH_DATA_SQLSHARE_FRAGMENT_VAL = f'{PATH_DATA_SQLSHARE_FRAGMENT}/val'
+
+PATH_DATA_SQLSHARE_TEMPLATE_TRAIN = f'{PATH_DATA_SQLSHARE_TEMPLATE}/train'
+PATH_DATA_SQLSHARE_TEMPLATE_TEST = f'{PATH_DATA_SQLSHARE_TEMPLATE}/test'
+PATH_DATA_SQLSHARE_TEMPLATE_VAL = f'{PATH_DATA_SQLSHARE_TEMPLATE}/val'
 
 class Contants(object):
 
@@ -38,117 +66,129 @@ class Contants(object):
 
     @constant
     def DATA_DIR_TRAIN_SDSS_RAW():
-        return 'data/processed_data/train_sdss/basic.csv'
+        return f'{PATH_DATA_SDSS}/basic_train.csv'
+
+    @constant
+    def DATA_DIR_TRAIN_SDSS_TEMPLATIEZED():
+        return f'{PATH_DATA_SDSS_TEMPLATE_TRAIN}/templatized.csv'
 
     @constant
     def DATA_DIR_TRAIN_SDSS_WITH_CLS():
-        return 'data/processed_data/train_sdss/with_cls.csv'
+        return f'{PATH_DATA_SDSS_FRAGMENT_TRAIN}/with_cls.csv'
 
     @constant
     def DATA_DIR_TRAIN_SDSS_TOKENIZED_BERT():
-        return 'data/processed_data/train_sdss/tokenized_bert.csv'
+        return f'{PATH_DATA_SDSS_FRAGMENT_TRAIN}/tokenized_bert.csv'
 
     @constant
     def DATA_DIR_TRAIN_SDSS_TOKENIZED_CODEBERT():
-        return 'data/processed_data/train_sdss/tokenized_codebert.csv'
+        return f'{PATH_DATA_SDSS_FRAGMENT_TRAIN}/tokenized_codebert.csv'
 
     @constant
     def DATA_DIR_TEST_SDSS_RAW():
-        return 'data/processed_data/test_sdss/basic.csv'
+        return f'{PATH_DATA_SDSS}/basic_test.csv'
+
+    @constant
+    def DATA_DIR_TEST_SDSS_TEMPLATIEZED():
+        return f'{PATH_DATA_SDSS_TEMPLATE_TEST}/templatized.csv'
 
     @constant
     def DATA_DIR_TEST_SDSS_WITH_CLS():
-        return 'data/processed_data/test_sdss/with_cls.csv'
+        return f'{PATH_DATA_SDSS_FRAGMENT_TEST}/with_cls.csv'
 
     @constant
     def DATA_DIR_TEST_SDSS_TOKENIZED_BERT():
-        return 'data/processed_data/test_sdss/tokenized_bert.csv'
+        return f'{PATH_DATA_SDSS_FRAGMENT_TEST}/tokenized_bert.csv'
 
     @constant
     def DATA_DIR_TEST_SDSS_TOKENIZED_CODEBERT():
-        return 'data/processed_data/test_sdss/tokenized_codebert.csv'
+        return f'{PATH_DATA_SDSS_FRAGMENT_TEST}/tokenized_codebert.csv'
 
     @constant
     def DATA_DIR_VAL_SDSS_RAW():
-        return 'data/processed_data/val_sdss/basic.csv'
+        return f'{PATH_DATA_SDSS}/basic_val.csv'
 
     @constant
     def DATA_DIR_VAL_SDSS_WITH_CLS():
-        return 'data/processed_data/val_sdss/with_cls.csv'
+        return f'{PATH_DATA_SDSS_FRAGMENT_VAL}/with_cls.csv'
 
     @constant
     def DATA_DIR_VAL_SDSS_TOKENIZED_BERT():
-        return 'data/processed_data/val_sdss/tokenized_bert.csv'
+        return f'{PATH_DATA_SDSS_FRAGMENT_VAL}/tokenized_bert.csv'
 
     @constant
     def DATA_DIR_VAL_SDSS_TOKENIZED_CODEBERT():
-        return 'data/processed_data/val_sdss/tokenized_codebert.csv'
+        return f'{PATH_DATA_SDSS_FRAGMENT_VAL}/tokenized_codebert.csv'
 
     # SqlShare
 
     @constant
     def DATA_DIR_TRAIN_SQLSHARE_RAW():
-        return 'data/processed_data/train_sqlshare/basic.csv'
+        return f'{PATH_DATA_SQLSHARE}/basic_train.csv'
 
     @constant
     def DATA_DIR_TRAIN_SQLSHARE_RAW_NO_FUNC():
-        return 'data/processed_data/train_sqlshare/basic_no_func.csv'
+        return f'{PATH_DATA_SQLSHARE}/basic_no_func_train.csv'
+
+    @constant
+    def DATA_DIR_TRAIN_SQLSHARE_TEMPLATIEZED():
+        return f'{PATH_DATA_SQLSHARE_FRAGMENT_TRAIN}/templatized.csv'
 
     @constant
     def DATA_DIR_TRAIN_SQLSHARE_WITH_CLS():
-        return 'data/processed_data/train_sqlshare/with_cls.csv'
+        return f'{PATH_DATA_SQLSHARE_FRAGMENT_TRAIN}/with_cls.csv'
 
     @constant
     def DATA_DIR_TRAIN_SQLSHARE_TOKENIZED_BERT_CONCAT():
-        return 'data/processed_data/train_sqlshare/tokenized_bert_concat.csv'
+        return f'{PATH_DATA_SQLSHARE_FRAGMENT_TRAIN}/tokenized_bert_concat.csv'
 
     @constant
     def DATA_DIR_TRAIN_SQLSHARE_TOKENIZED_BERT():
-        return 'data/processed_data/train_sqlshare/tokenized_bert.csv'
+        return f'{PATH_DATA_SQLSHARE_FRAGMENT_TRAIN}/tokenized_bert.csv'
 
     @constant
     def DATA_DIR_TRAIN_SQLSHARE_TOKENIZED_CODEBERT():
-        return 'data/processed_data/train_sqlshare/tokenized_codebert.csv'
+        return f'{PATH_DATA_SQLSHARE_FRAGMENT_TRAIN}/tokenized_codebert.csv'
 
     @constant
     def DATA_DIR_TEST_SQLSHARE_RAW():
-        return 'data/processed_data/test_sqlshare/basic.csv'
+        return f'{PATH_DATA_SQLSHARE}/basic_test.csv'
 
     @constant
     def DATA_DIR_TEST_SQLSHARE_RAW_NO_FUNC():
-        return 'data/processed_data/test_sqlshare/basic_no_func.csv'
+        return f'{PATH_DATA_SQLSHARE}/basic_no_func_test.csv'
 
     @constant
     def DATA_DIR_TEST_SQLSHARE_WITH_CLS():
-        return 'data/processed_data/test_sqlshare/with_cls.csv'
+        return f'{PATH_DATA_SQLSHARE_FRAGMENT_TEST}/with_cls.csv'
 
     @constant
     def DATA_DIR_TEST_SQLSHARE_TOKENIZED_BERT():
-        return 'data/processed_data/test_sqlshare/tokenized_bert.csv'
+        return f'{PATH_DATA_SQLSHARE_FRAGMENT_TEST}/tokenized_bert.csv'
 
     @constant
     def DATA_DIR_TEST_SQLSHARE_TOKENIZED_CODEBERT():
-        return 'data/processed_data/test_sqlshare/tokenized_codebert.csv'
+        return f'{PATH_DATA_SQLSHARE_FRAGMENT_TEST}/tokenized_codebert.csv'
 
     @constant
     def DATA_DIR_VAL_SQLSHARE_RAW():
-        return 'data/processed_data/val_sqlshare/basic.csv'
+        return f'{PATH_DATA_SQLSHARE}/basic_val.csv'
 
     @constant
     def DATA_DIR_VAL_SQLSHARE_RAW_NO_FUNC():
-        return 'data/processed_data/val_sqlshare/basic_no_func.csv'
+        return f'{PATH_DATA_SQLSHARE}/basic_no_func_val.csv'
 
     @constant
     def DATA_DIR_VAL_SQLSHARE_WITH_CLS():
-        return 'data/processed_data/val_sqlshare/with_cls.csv'
+        return f'{PATH_DATA_SQLSHARE_FRAGMENT_VAL}/with_cls.csv'
 
     @constant
     def DATA_DIR_VAL_SQLSHARE_TOKENIZED_BERT():
-        return 'data/processed_data/val_sqlshare/tokenized_bert.csv'
+        return f'{PATH_DATA_SQLSHARE_FRAGMENT_VAL}/tokenized_bert.csv'
 
     @constant
     def DATA_DIR_VAL_SQLSHARE_TOKENIZED_CODEBERT():
-        return 'data/processed_data/val_sqlshare/tokenized_codebert.csv'
+        return f'{PATH_DATA_SQLSHARE_FRAGMENT_VAL}/tokenized_codebert.csv'
 
     #########################
 

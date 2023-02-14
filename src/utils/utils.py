@@ -146,3 +146,29 @@ def freeze_bert_layers(model, num_of_layers=0):
 
     for name in layers_names_to_be_freezed:
         model.bert_model.encoder.get_parameter(name).requires_grad = False
+
+
+######################################################################
+# Returning values
+
+
+def return_result_or_default(func, input_args, default_value):
+    try:
+        outout = func(input_args)
+    except:
+        outout = default_value
+    return outout
+
+
+def return_result_or_zero(func, input_args):
+    return return_result_or_default(func, input_args, default_value=0)
+
+
+def return_result_or_none(func, input_args):
+    return return_result_or_default(func, input_args, default_value=None)
+
+
+def fetch_dict_by_key(input_dict, key):
+    if key in input_dict:
+        return input_dict[key]
+    return None

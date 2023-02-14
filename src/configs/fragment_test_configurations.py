@@ -1,6 +1,6 @@
 from utils.config_key_model_constants import CONFIG_KEYS_MODEL
 from utils.contants import CONSTANTS
-from models.bert_based_model import ResqueBertModel
+from fragment.models.bert_based_model import ResqueBertModel
 
 test_config_sqlshare_bert = {
     CONFIG_KEYS_MODEL.MODEL_TYPE_CLASS: ResqueBertModel,
