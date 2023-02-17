@@ -23,5 +23,21 @@ class ConfigKeysData(object):
     def NAME():
         return "name"
 
+    @constant
+    def ALL_DATA_PATHS():
+        return "all_data_paths"
+
+    @constant
+    def TEMPLATIZED_PATH():
+        return "templatized_path"
+
+    @constant
+    def TEMPLATE_LABELED_PATH():
+        return "template_labeled_path"
+
+    @constant
+    def TEMPLATES_LIST_PATH():
+        return "templates_list_path"
+
 
 CONFIG_KEYS_DATA = ConfigKeysData()

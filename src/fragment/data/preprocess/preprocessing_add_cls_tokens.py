@@ -1,4 +1,3 @@
-import os
 from sql_metadata import Parser
 from utils.utils import *
 from imports import *
@@ -97,7 +96,8 @@ def execute(raw_path, with_cls_path, name=''):
     raw_data_dir_path = get_absolute_path(raw_path)
 
     final_df, sessions_with_error = create_df_with_cls_tokens(
-        raw_data_dir_path)
+        raw_data_dir_path
+    )
     final_df.to_csv(with_cls_data_dir_path)
 
     print("{name} Data with CLS Tokens - Done!")

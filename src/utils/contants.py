@@ -69,8 +69,16 @@ class Contants(object):
         return f'{PATH_DATA_SDSS}/basic_train.csv'
 
     @constant
+    def DATA_DIR_SDSS_TEMPLATES_LIST():
+        return f'{PATH_DATA_SDSS_TEMPLATE}/templates_list.csv'
+
+    @constant
     def DATA_DIR_TRAIN_SDSS_TEMPLATIEZED():
         return f'{PATH_DATA_SDSS_TEMPLATE_TRAIN}/templatized.csv'
+
+    @constant
+    def DATA_DIR_TRAIN_SDSS_TEMPLATE_LABELED():
+        return f'{PATH_DATA_SDSS_TEMPLATE_TRAIN}/template_labeled.csv'
 
     @constant
     def DATA_DIR_TRAIN_SDSS_WITH_CLS():
@@ -93,6 +101,10 @@ class Contants(object):
         return f'{PATH_DATA_SDSS_TEMPLATE_TEST}/templatized.csv'
 
     @constant
+    def DATA_DIR_TEST_SDSS_TEMPLATE_LABELED():
+        return f'{PATH_DATA_SDSS_TEMPLATE_TEST}/template_labeled.csv'
+
+    @constant
     def DATA_DIR_TEST_SDSS_WITH_CLS():
         return f'{PATH_DATA_SDSS_FRAGMENT_TEST}/with_cls.csv'
 
@@ -107,6 +119,14 @@ class Contants(object):
     @constant
     def DATA_DIR_VAL_SDSS_RAW():
         return f'{PATH_DATA_SDSS}/basic_val.csv'
+
+    @constant
+    def DATA_DIR_VAL_SDSS_TEMPLATIEZED():
+        return f'{PATH_DATA_SDSS_TEMPLATE_VAL}/templatized.csv'
+
+    @constant
+    def DATA_DIR_VAL_SDSS_TEMPLATE_LABELED():
+        return f'{PATH_DATA_SDSS_TEMPLATE_VAL}/template_labeled.csv'
 
     @constant
     def DATA_DIR_VAL_SDSS_WITH_CLS():
