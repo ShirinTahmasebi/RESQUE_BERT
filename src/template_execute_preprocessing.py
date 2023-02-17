@@ -2,9 +2,9 @@ from utils.contants import CONSTANTS
 from utils.config_key_data_constants import CONFIG_KEYS_DATA
 from utils.utils import *
 from configs.template_preprocessing_configurations import config_sdss_templatization
-from template.data.preprocess.preprocessing_extract_templates import execute as execute_templatization
-from template.data.preprocess.templatized_dataframe_statistics import execute as print_statistics
-from template.data.preprocess.preprocessing_extract_labels import execute as execute_labeling
+from Projects.RESQU_BERT.src.template.data.preprocess.extract_templates import execute as execute_templatization
+from Projects.RESQU_BERT.src.template.data.preprocess.print_statiistics_of_templatized_df import execute as print_statistics
+from Projects.RESQU_BERT.src.template.data.preprocess.extract_labels import execute as execute_labeling
 
 config = config_sdss_templatization
 
