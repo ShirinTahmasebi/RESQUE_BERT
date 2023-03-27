@@ -1,4 +1,4 @@
-from utils.utils import *
+from utils.helper import *
 
 
 def label_templates(list_of_templatized_dfs, templates_list_path):
@@ -11,7 +11,7 @@ def label_templates(list_of_templatized_dfs, templates_list_path):
     template_df['label'] = [f'T{i}' for i in range(len(unique_templates))]
 
     template_df_path = get_absolute_path(templates_list_path)
-    # template_df.to_csv(template_df_path)
+    template_df.to_csv(template_df_path)
 
 
 def add_template_labels_to_df(list_of_templatized_dfs, templates_list_path):
@@ -31,7 +31,7 @@ def add_template_labels_to_df(list_of_templatized_dfs, templates_list_path):
             lambda template_str: extract_template_label(template_str)
         )
 
-        # single_templatized_df.to_csv(get_absolute_path(path))
+        single_templatized_df.to_csv(get_absolute_path(path))
 
         print(f'{name} saved!')
 

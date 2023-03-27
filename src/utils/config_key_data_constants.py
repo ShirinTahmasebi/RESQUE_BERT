@@ -39,5 +39,9 @@ class ConfigKeysData(object):
     def TEMPLATES_LIST_PATH():
         return "templates_list_path"
 
+    @constant
+    def TEMPLATE_SEQUENCE_PATH():
+        return "templates_sequence_path"
+
 
 CONFIG_KEYS_DATA = ConfigKeysData()

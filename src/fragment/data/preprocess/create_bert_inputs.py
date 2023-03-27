@@ -1,6 +1,6 @@
 import os
 from sql_metadata import Parser
-from utils.utils import *
+from Projects.RESQU_BERT.src.utils.helper import *
 from imports import *
 import sys
 sys.path.append('../')

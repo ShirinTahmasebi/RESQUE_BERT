@@ -1,8 +1,8 @@
 from utils.config_key_data_constants import CONFIG_KEYS_DATA
 from configs.fragment_preprocessing_configuration import val_config_sqlshare_bert
-from fragment.data.preprocess.preprocessing_add_cls_tokens import execute as execute_add_cls_tokens
-from fragment.data.preprocess.preprocessing_create_bert_inputs import execute as execute_create_bert_inputs
-from utils.utils import *
+from fragment.data.preprocess.add_cls_tokens import execute as execute_add_cls_tokens
+from fragment.data.preprocess.create_bert_inputs import execute as execute_create_bert_inputs
+from utils.helper import *
 
 # The following lines are for converting count function in SELECT clause to a simple attribute.
 # By default, this conversion is off! So, to apply it, you need to change the boolean used in the if condition.

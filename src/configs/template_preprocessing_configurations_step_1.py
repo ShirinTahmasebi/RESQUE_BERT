@@ -1,5 +1,5 @@
 from utils.config_key_data_constants import CONFIG_KEYS_DATA
-from utils.utils import *
+from utils.helper import *
 
 config_sdss_templatization = {
     CONFIG_KEYS_DATA.ALL_DATA_PATHS: [

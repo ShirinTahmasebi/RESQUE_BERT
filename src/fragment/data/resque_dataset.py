@@ -2,7 +2,7 @@ import sys
 sys.path.append('../')
 
 from imports import *
-from utils.utils import *
+from utils.helper import *
 
 class ResqueDataset(Dataset):
     def __init__(self, bert_input_dataframe):

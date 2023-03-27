@@ -1,4 +1,4 @@
-from utils.utils import *
+from utils.helper import *
 from data.resque_dataloader import TestDataLoader
 from data.resque_dataset import ResqueDataset
 from imports import *

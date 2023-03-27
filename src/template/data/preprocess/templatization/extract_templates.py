@@ -1,5 +1,5 @@
 from sql_metadata import Parser
-from utils.utils import *
+from Projects.RESQU_BERT.src.utils.helper import *
 from imports import *
 import sys
 sys.path.append('../')
@@ -17,12 +17,36 @@ def templatize_query(query):
     try:
         # Extract some meta-data about the query
         parser = Parser(query)
-        num_of_tables = return_result_or_zero(len, parser.tables)
-        num_of_attributes_select = return_result_or_zero(len, fetch_dict_by_key(parser.columns_dict, 'select'))
-        num_of_attributes_where = return_result_or_zero(len, fetch_dict_by_key(parser.columns_dict, 'where'))
-        num_of_attributes_order_by = return_result_or_zero(len, fetch_dict_by_key(parser.columns_dict, 'order_by'))
-        num_of_attributes_group_by = return_result_or_zero(len, fetch_dict_by_key(parser.columns_dict, 'group_by'))
-        num_of_attributes_join = return_result_or_zero(len, fetch_dict_by_key(parser.columns_dict, 'join'))
+        
+        num_of_tables = return_result_or_zero(
+            func=len,
+            input_args=parser.tables
+        )
+
+        num_of_attributes_select = return_result_or_zero(
+            func=len,
+            input_args=fetch_dict_by_key(parser.columns_dict, 'select')
+        )
+
+        num_of_attributes_where = return_result_or_zero(
+            func=len, 
+            input_args=fetch_dict_by_key(parser.columns_dict, 'where')
+        )
+
+        num_of_attributes_order_by = return_result_or_zero(
+            func=len, 
+            input_args=fetch_dict_by_key(parser.columns_dict, 'order_by')
+        )
+
+        num_of_attributes_group_by = return_result_or_zero(
+            func=len, 
+            input_args=fetch_dict_by_key(parser.columns_dict, 'group_by')
+        )
+
+        num_of_attributes_join = return_result_or_zero(
+            func=len, 
+            input_args=fetch_dict_by_key(parser.columns_dict, 'join')
+        )
 
         # Extract template
         attributes = set(itertools.chain(*parser.columns_dict.values()))
@@ -40,7 +64,6 @@ def templatize_query(query):
         print('Error in parsing the query:')
         print(f'Query = {str(query)}')
         print(f'Exception = {str(ex)}')
-
 
     return {
         'template_v2': template,

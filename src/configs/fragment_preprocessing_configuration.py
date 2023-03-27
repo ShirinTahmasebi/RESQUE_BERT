@@ -1,5 +1,5 @@
 from utils.config_key_data_constants import CONFIG_KEYS_DATA
-from utils.utils import *
+from utils.helper import *
 
 train_config_sqlshare_bert = {
     CONFIG_KEYS_DATA.RAW_DATA_PATH: CONSTANTS.DATA_DIR_TRAIN_SQLSHARE_RAW_NO_FUNC,

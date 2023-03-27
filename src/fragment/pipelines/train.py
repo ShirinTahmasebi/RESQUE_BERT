@@ -1,6 +1,6 @@
-from utils.utils import *
-from data.resque_dataloader import TrainDataLoader
-from data.resque_dataset import ResqueDataset
+from utils.helper import *
+from fragment.data.resque_dataloader import TrainDataLoader
+from fragment.data.resque_dataset import ResqueDataset
 from imports import *
 import sys
 sys.path.append('../')
