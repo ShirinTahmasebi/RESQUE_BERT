@@ -16,7 +16,7 @@ PATH_DATA_SDSS_TEMPLATE_VAL = f'{PATH_DATA_SDSS_TEMPLATE}/val'
 
 
 # SQLShare
-PATH_DATA_SQLSHARE = 'data/sqlshare' 
+PATH_DATA_SQLSHARE = 'data/sqlshare'
 
 PATH_DATA_SQLSHARE_FRAGMENT = f'{PATH_DATA_SQLSHARE}/fragment'
 PATH_DATA_SQLSHARE_TEMPLATE = f'{PATH_DATA_SQLSHARE}/template'
@@ -28,6 +28,7 @@ PATH_DATA_SQLSHARE_FRAGMENT_VAL = f'{PATH_DATA_SQLSHARE_FRAGMENT}/val'
 PATH_DATA_SQLSHARE_TEMPLATE_TRAIN = f'{PATH_DATA_SQLSHARE_TEMPLATE}/train'
 PATH_DATA_SQLSHARE_TEMPLATE_TEST = f'{PATH_DATA_SQLSHARE_TEMPLATE}/test'
 PATH_DATA_SQLSHARE_TEMPLATE_VAL = f'{PATH_DATA_SQLSHARE_TEMPLATE}/val'
+
 
 class Contants(object):
 
@@ -64,6 +65,8 @@ class Contants(object):
     def NUMBER_OF_WARM_UP_STEPS():
         return 5
 
+    # SDSS
+
     @constant
     def DATA_DIR_TRAIN_SDSS_RAW():
         return f'{PATH_DATA_SDSS}/basic_train.csv'
@@ -79,6 +82,30 @@ class Contants(object):
     @constant
     def DATA_DIR_TRAIN_SDSS_TEMPLATE_LABELED():
         return f'{PATH_DATA_SDSS_TEMPLATE_TRAIN}/template_labeled.csv'
+
+    @constant
+    def DATA_DIR_TRAIN_SDSS_TEMPLATE_INPUT_SIMPLE():
+        return f'{PATH_DATA_SDSS_TEMPLATE_TRAIN}/template_sequence_simple.csv'
+
+    @constant
+    def DATA_DIR_TRAIN_SDSS_TEMPLATE_INPUT_PROMPT_V1():
+        return f'{PATH_DATA_SDSS_TEMPLATE_TRAIN}/template_sequence_prompt_v1.csv'
+
+    @constant
+    def DATA_DIR_TRAIN_SDSS_TEMPLATE_INPUT_PROMPT_V2():
+        return f'{PATH_DATA_SDSS_TEMPLATE_TRAIN}/template_sequence_prompt_v2.csv'
+
+    @constant
+    def DATA_DIR_TRAIN_SDSS_TEMPLATE_TOKENIZED_SIMPLE():
+        return f'{PATH_DATA_SDSS_TEMPLATE_TRAIN}/template_tokenized_simple.csv'
+
+    @constant
+    def DATA_DIR_TRAIN_SDSS_TEMPLATE_TOKENIZED_PROMPT_V1():
+        return f'{PATH_DATA_SDSS_TEMPLATE_TRAIN}/template_tokenized_prompt_v1.csv'
+
+    @constant
+    def DATA_DIR_TRAIN_SDSS_TEMPLATE_TOKENIZED_PROMPT_V2():
+        return f'{PATH_DATA_SDSS_TEMPLATE_TRAIN}/template_tokenized_prompt_v2.csv'
 
     @constant
     def DATA_DIR_TRAIN_SDSS_WITH_CLS():
@@ -103,6 +130,30 @@ class Contants(object):
     @constant
     def DATA_DIR_TEST_SDSS_TEMPLATE_LABELED():
         return f'{PATH_DATA_SDSS_TEMPLATE_TEST}/template_labeled.csv'
+
+    @constant
+    def DATA_DIR_TEST_SDSS_TEMPLATE_INPUT_SIMPLE():
+        return f'{PATH_DATA_SDSS_TEMPLATE_TEST}/template_sequence_simple.csv'
+
+    @constant
+    def DATA_DIR_TEST_SDSS_TEMPLATE_INPUT_PROMPT_V1():
+        return f'{PATH_DATA_SDSS_TEMPLATE_TEST}/template_sequence_prompt_v1.csv'
+
+    @constant
+    def DATA_DIR_TEST_SDSS_TEMPLATE_INPUT_PROMPT_V2():
+        return f'{PATH_DATA_SDSS_TEMPLATE_TEST}/template_sequence_prompt_v2.csv'
+
+    @constant
+    def DATA_DIR_TEST_SDSS_TEMPLATE_TOKENIZED_SIMPLE():
+        return f'{PATH_DATA_SDSS_TEMPLATE_TEST}/template_tokenized_simple.csv'
+
+    @constant
+    def DATA_DIR_TEST_SDSS_TEMPLATE_TOKENIZED_PROMPT_V1():
+        return f'{PATH_DATA_SDSS_TEMPLATE_TEST}/template_tokenized_prompt_v1.csv'
+
+    @constant
+    def DATA_DIR_TEST_SDSS_TEMPLATE_TOKENIZED_PROMPT_V2():
+        return f'{PATH_DATA_SDSS_TEMPLATE_TEST}/template_tokenized_prompt_v2.csv'
 
     @constant
     def DATA_DIR_TEST_SDSS_WITH_CLS():

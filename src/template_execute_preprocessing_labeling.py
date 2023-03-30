@@ -1,7 +1,7 @@
 from utils.contants import CONSTANTS
 from utils.config_key_data_constants import CONFIG_KEYS_DATA
 from utils.helper import *
-from configs.template_preprocessing_configurations_step_1 import config_sdss_templatization
+from configs.template_preprocessing_configurations import config_sdss_templatization
 from template.data.preprocess.templatization.extract_templates import execute as execute_templatization
 from template.data.preprocess.templatization.extract_labels import execute as execute_labeling
 from template.data.preprocess.print_statistics_of_templatized_df import execute as print_statistics
@@ -41,6 +41,14 @@ def fetch_dfs(list_of_data_paths):
         )
 
     return list_of_templatized_dfs
+
+
+# *********************************************************************************************************
+# The procedure is as follows:
+# 1. We need to extract all the unique templates in train, test, and validation datasets.
+# 2. Then, we need to label the unique templates.
+# 3. Now, based on the labeled unique templates, we can label all the train, test, and validation datasets.
+# *********************************************************************************************************
 
 
 # Comment this line out if you need to create the templatized dataframes

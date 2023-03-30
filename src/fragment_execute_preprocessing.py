@@ -2,7 +2,11 @@ from utils.config_key_data_constants import CONFIG_KEYS_DATA
 from configs.fragment_preprocessing_configuration import val_config_sqlshare_bert
 from fragment.data.preprocess.add_cls_tokens import execute as execute_add_cls_tokens
 from fragment.data.preprocess.create_bert_inputs import execute as execute_create_bert_inputs
-from utils.helper import *
+from utils.contants import CONSTANTS
+from utils.helper import get_absolute_path, replace_count_function
+from imports import *
+import sys
+sys.path.append('../')
 
 # The following lines are for converting count function in SELECT clause to a simple attribute.
 # By default, this conversion is off! So, to apply it, you need to change the boolean used in the if condition.
@@ -36,5 +40,6 @@ def execute_preprocess_pipeline(config):
 
     execute_add_cls_tokens(raw_data_path, with_cls_path, name)
     execute_create_bert_inputs(with_cls_path, tokenized_path, tokenizer, name)
+
 
 execute_preprocess_pipeline(val_config_sqlshare_bert)

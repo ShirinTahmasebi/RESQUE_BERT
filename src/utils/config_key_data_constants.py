@@ -43,5 +43,29 @@ class ConfigKeysData(object):
     def TEMPLATE_SEQUENCE_PATH():
         return "templates_sequence_path"
 
+    @constant
+    def TEMPLATE_INPUT_SIMPLE_PATH():
+        return "template_input_simple_path"
+
+    @constant
+    def TEMPLATE_INPUT_PROMPT_V1_PATH():
+        return "template_input_prompt_v1_path"
+
+    @constant
+    def TEMPLATE_INPUT_PROMPT_V2_PATH():
+        return "template_input_prompt_v2_path"
+
+    @constant
+    def TEMPLATE_TOKENIZED_SIMPLE_PATH():
+        return "template_tokenized_simple_path"
+
+    @constant
+    def TEMPLATE_TOKENIZED_PROMPT_V1_PATH():
+        return "template_tokenized_prompt_v1_path"
+
+    @constant
+    def TEMPLATE_TOKENIZED_PROMPT_V2_PATH():
+        return "template_tokenized_prompt_v2_path"
+
 
 CONFIG_KEYS_DATA = ConfigKeysData()
