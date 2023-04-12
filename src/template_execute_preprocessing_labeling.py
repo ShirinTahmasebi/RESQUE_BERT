@@ -3,7 +3,7 @@ from utils.config_key_data_constants import CONFIG_KEYS_DATA
 from utils.helper import *
 from configs.template_preprocessing_configurations import config_sdss_templatization
 from template.data.preprocess.templatization.extract_templates import execute as execute_templatization
-from template.data.preprocess.templatization.extract_labels import execute as execute_labeling
+from template.data.preprocess.templatization.extract_labels import execute_labeling, execute_template_labels_extraction, execute_template_filtering
 from template.data.preprocess.print_statistics_of_templatized_df import execute as print_statistics
 
 config = config_sdss_templatization
@@ -55,7 +55,30 @@ def fetch_dfs(list_of_data_paths):
 templatize(config[CONFIG_KEYS_DATA.ALL_DATA_PATHS])
 list_of_templatized_dfs = fetch_dfs(config[CONFIG_KEYS_DATA.ALL_DATA_PATHS])
 print_statistics(list_of_templatized_dfs)
+
+execute_template_labels_extraction(
+    input_dfs_paths=list_of_templatized_dfs,
+    output_df_path=config[CONFIG_KEYS_DATA.TEMPLATES_LIST_PATH_ALL],
+    intersection=None
+)
+
+
+execute_template_labels_extraction(
+    input_dfs_paths=list_of_templatized_dfs,
+    output_df_path=config[CONFIG_KEYS_DATA.TEMPLATES_LIST_PATH_ALL]
+)
+
+execute_template_filtering(
+    list_of_templatized_dfs,
+    df_names = [
+        config[CONFIG_KEYS_DATA.ALL_DATA_PATHS][0][CONFIG_KEYS_DATA.NAME],
+        config[CONFIG_KEYS_DATA.ALL_DATA_PATHS][1][CONFIG_KEYS_DATA.NAME]
+    ],
+    input_templates_path = config[CONFIG_KEYS_DATA.TEMPLATES_LIST_PATH_ALL],
+    output_filtered_templates_path=config[CONFIG_KEYS_DATA.TEMPLATES_LIST_PATH_INTERSECTION]
+)
+
 execute_labeling(
     list_of_templatized_dfs,
-    config[CONFIG_KEYS_DATA.TEMPLATES_LIST_PATH]
+    config[CONFIG_KEYS_DATA.TEMPLATES_LIST_PATH_INTERSECTION]
 )
